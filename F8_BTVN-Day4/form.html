@@ -3,20 +3,26 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Document</title>
+        <title>Form</title>
         <link rel="stylesheet" href="./asset/reset.css" />
         <link rel="stylesheet" href="./asset/style.css" />
     </head>
     <body>
         <div class="form">
             <div class="heading-1"><h1>Register</h1></div>
-            <form class="Register" action="" autocomplete="off">
+            <form
+                class="Register"
+                action=""
+                autocomplete="off"
+                spellcheck="false"
+            >
                 <div class="form-group">
                     <label for="name" class="fw_600"> Display name: </label>
                     <input
                         type="text"
                         id="name"
                         placeholder="Display name..."
+                        autofocus
                     />
                 </div>
                 <div class="form-group">
@@ -114,7 +120,7 @@
                     </label>
                 </div>
                 <div class="form-group">
-                    <button>Register</button>
+                    <button class="btn">Register</button>
                 </div>
             </form>
         </div>
