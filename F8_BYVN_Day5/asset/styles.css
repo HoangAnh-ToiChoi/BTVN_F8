@@ -163,7 +163,7 @@ html {
 .form-group > input,
 button {
     outline: none;
-    padding: 2px 6px;
+    padding: 4px 8px;
     border-radius: 8px;
     border: 2px solid gray;
     width: 100%;
