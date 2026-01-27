@@ -1,0 +1,389 @@
+* {
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 32px;
+}
+
+h2 {
+    font-size: 20px;
+}
+
+h3 {
+    font-size: 18px;
+}
+
+p {
+    font-size: 16px;
+}
+
+b,
+strong {
+    font-weight: bold;
+}
+
+i,
+em {
+    font-style: italic;
+}
+
+u {
+    text-decoration: underline;
+}
+
+li {
+    list-style-type: disc;
+}
+
+input,
+button,
+textarea,
+select {
+    font-size: inherit;
+    font-family: inherit;
+}
+
+body {
+    /* background-color: rgb(198, 193, 196); */
+    font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Oxygen,
+        Ubuntu,
+        Cantarell,
+        "Open Sans",
+        "Helvetica Neue",
+        sans-serif;
+    line-height: 1.6;
+}
+
+.mt_12 {
+    margin-top: 12px;
+}
+
+.mt-8 {
+    margin-top: 8px;
+}
+
+.fw_600 {
+    font-weight: 600;
+}
+
+html {
+    font-size: 16px;
+}
+
+/* Bai_1 */
+
+.menu {
+    background-color: #3e5cca;
+    padding: 20px 60px;
+    font-size: 0;
+}
+
+.menu li {
+    display: inline-block;
+    height: 26px;
+    margin-top: -2px;
+}
+
+.menu > li > a {
+    color: white;
+    text-decoration: none;
+    padding: 20px 20px;
+    font-size: 1.125rem;
+    margin-bottom: 8px;
+    border-left: 2px solid black;
+}
+
+.menu > li:first-child > a {
+    border-left: none;
+}
+
+.menu .active:hover {
+    color: black;
+    background-color: white;
+}
+
+.menu .active:active {
+    color: red;
+    background: black;
+}
+
+.menu li a::before {
+    content: "\25B6";
+    padding: 0 10px 0 0px;
+    height: 0px;
+    vertical-align: top;
+}
+
+/* Bài 2 */
+.heading-1 {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.form {
+    background: rgb(197, 191, 191);
+    max-width: 400px;
+    margin: 8px auto;
+    border-radius: 16px;
+}
+
+.form .form-group {
+    margin: 6px auto;
+    padding-left: 60px;
+    padding-right: 60px;
+}
+
+.form-group > label {
+    display: block;
+}
+
+.form-group .avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.form-group > input,
+button {
+    outline: none;
+    padding: 2px 6px;
+    border-radius: 8px;
+    border: 2px solid gray;
+    width: 100%;
+}
+
+.form-group .btn {
+    background: #0866ff;
+    margin-bottom: 16px;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.form-group .btn:hover {
+    opacity: 0.8;
+}
+.form-group .btn:active {
+    color: #ccc;
+    background: white;
+}
+.form-group input:focus {
+    border-color: #07c4ea;
+}
+
+.form-group input:user-invalid {
+    border-color: red;
+}
+
+.form-group:has(input:required)::after {
+    content: "*";
+    color: red;
+    margin: -20px;
+}
+
+.form:has(input:focus) {
+    border: 2px solid rgb(13, 155, 222);
+}
+
+/* Bài 3 */
+.container {
+    width: 1200px;
+    height: 100vh;
+    background: white;
+    margin: 0 auto;
+}
+.container .box {
+    background: #f7f7f7;
+    height: 560px;
+    width: 320px;
+    display: inline-block;
+    vertical-align: top;
+    margin: 140px 0 0 40px;
+    border-radius: 12px;
+}
+
+.container .box:hover {
+    cursor: pointer;
+    box-shadow: 0 0 20px 14px rgba(0, 0, 0, 0.1);
+}
+
+.container .box:nth-child(2) {
+    border: 2px solid #23db76;
+}
+
+.content > h3,
+p {
+    padding-left: 16px;
+}
+
+.content > h3 {
+    padding-top: 14px;
+    font-size: 2rem;
+}
+
+.content > .btn-current {
+    width: 100%;
+    margin-bottom: 12px;
+    background: #ccc;
+    opacity: 0.5;
+    border: none;
+    padding: 4px;
+}
+.content .btn-current,
+.btn-up {
+    width: 80%;
+    margin-left: 32px;
+}
+
+.content > p {
+    font-size: 0.875rem;
+}
+
+.content .tick {
+    font-size: 0.875rem;
+    margin-top: 12px;
+}
+
+.content h3:nth-of-type(2)::before {
+    content: "$";
+    font-size: 1rem;
+}
+
+.content .tick::before {
+    content: "✓ ";
+    color: white;
+    display: inline-flex;
+    background: #4e9e61;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    margin-right: 4px;
+}
+
+.content > .btn-up {
+    border: none;
+    background-color: #4c9c62;
+    color: white;
+    padding: 4px;
+}
+
+.content .discount::after {
+    content: "199.99";
+    padding-left: 12px;
+    opacity: 0.3;
+    font-weight: 300;
+    text-decoration: line-through;
+}
+
+.content .price + p {
+    opacity: 0.4;
+}
+
+.box-3 .content .tick {
+    font-size: 0.875rem;
+}
+
+/* Bài 4 */
+
+.main-blog {
+    width: 1200px;
+    height: 100vh;
+    margin: 18px auto;
+}
+
+.main-blog .title {
+    text-align: center;
+}
+
+.main-blog img {
+    width: 86%;
+    margin: 20px auto;
+    border-radius: 12px;
+    display: block;
+}
+
+.content-body .first-para::first-letter {
+    font-size: 3rem;
+    font-weight: bold;
+    float: left;
+    line-height: 0.4;
+    margin-right: 4px;
+}
+
+.content-body p::first-line {
+    font-weight: 500;
+}
+
+.content-body p::selection {
+    background: #098dd3;
+}
+
+.content-body .cool-quote {
+    margin: 12px 30px;
+    font-style: italic;
+}
+
+.content-body .cool-quote::before {
+    content: "❝";
+}
+
+.content-body .cool-quote::after {
+    content: "❞";
+}
+
+.main-blog .sub-heading:not(h1) {
+    font-weight: 600;
+    color: red;
+}
+
+.comments {
+    height: 50%;
+}
+
+.comments .comment-item img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    float: left;
+    margin: 6px 8px 0 0;
+}
+
+.comments .comment-item {
+    background: #f1eeee;
+    margin-top: 18px;
+    padding: 12px 12px;
+    border-radius: 12px;
+}
+
+.comments .comment-item:last-child {
+    margin-bottom: 30px;
+}
+
+.comments .comment-item:hover {
+    cursor: pointer;
+    box-shadow: 0 0 20px 14px rgba(0, 0, 0, 0.1);
+}
+
+.content-body p:nth-of-type(2)::selection {
+    color: blue;
+    background: #ccc;
+}
