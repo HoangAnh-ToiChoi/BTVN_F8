@@ -1,38 +1,160 @@
 <!doctype html>
-<html lang="en">
+<html lang="vi">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>BTVN_Day5</title>
-        <style>
-            .Heading {
-                margin-top: 40px;
-                margin-left: 10%;
-            }
-            ol {
-                margin-top: 40px;
-                margin-left: 9%;
-            }
-            ol > li {
-                font-size: 18px;
-            }
-            ol > li > a {
-                line-height: 50px;
-                text-decoration: none;
-                font-size: 22px;
-                color: black;
-            }
-        </style>
+        <title>Bài Tập Về Nhà - F8</title>
+        <meta
+            name="description"
+            content="Danh sách bài tập về nhà F8 - Học HTML, CSS và JavaScript"
+        />
+        <link rel="stylesheet" href="./asset/buoi5.css" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+            rel="stylesheet"
+        />
     </head>
     <body>
-        <div class="content">
-            <div class="Heading"><h1>Bài tập về nhà</h1></div>
-            <ol>
-                <li><a href="./menu-enhanced.html">Menu nâng cao</a></li>
-                <li><a href="./form-interactive.html">From nâng cao</a></li>
-                <li><a href="./pricing-table.html">pricing-table</a></li>
-                <li><a href="./blog-post.html">Blog-post</a></li>
-            </ol>
+        <div class="container">
+            <header class="header">
+                <h1>📚 Bài Tập Về Nhà</h1>
+                <p class="subtitle">Fullstack Web Developer - F8</p>
+            </header>
+
+            <main class="cards-grid">
+                <!-- Card 1: Nâng cấp menu -->
+                <article class="card">
+                    <div class="card-header">
+                        <h2>1. Nâng cấp menu</h2>
+                        <p class="slogan">
+                            💪 Tự code, tự làm, không bảo "AI" làm hộ – Chúc bạn
+                            hoàn thành tốt bài tập! 🚀
+                        </p>
+                    </div>
+                    <div class="card-body">
+                        <ul class="feature-list">
+                            <li>
+                                Dựa trên menu.html bài cũ, tạo
+                                menu-enhanced.html
+                            </li>
+                            <li>Thêm hiệu ứng hover (đổi màu nền, màu chữ)</li>
+                            <li>Active state khi click</li>
+                            <li>
+                                Thêm vạch ngăn cách giữa các li
+                                (border/pseudo-element)
+                            </li>
+                            <li>Dùng :first-child/:last-child xóa vạch thừa</li>
+                            <li>
+                                Dùng ::before thêm icon unicode trước menu item
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="card-footer">
+                        <a href="./menu-enhanced.html" class="btn btn-featured"
+                            >Xem bài làm</a
+                        >
+                    </div>
+                </article>
+
+                <!-- Card 2: Form tương tác -->
+                <article class="card">
+                    <div class="card-header">
+                        <h2>2. Form tương tác</h2>
+                        <p class="slogan">
+                            💪 Tự code, tự làm, không bảo "AI" làm hộ – Chúc bạn
+                            hoàn thành tốt bài tập! 🚀
+                        </p>
+                    </div>
+                    <div class="card-body">
+                        <ul class="feature-list">
+                            <li>
+                                Dựa trên form.html, tạo form-interactive.html
+                            </li>
+                            <li>Input đổi màu viền khi focus</li>
+                            <li>Input đổi màu viền đỏ khi invalid (có text)</li>
+                            <li>
+                                Dùng ::after thêm dấu sao đỏ (*) cho field bắt
+                                buộc
+                            </li>
+                            <li>Hover/Active cho nút submit</li>
+                            <li>Style container khi form-focus</li>
+                        </ul>
+                    </div>
+                    <div class="card-footer">
+                        <a
+                            href="./form-interactive.html"
+                            class="btn btn-featured"
+                            >Xem bài làm</a
+                        >
+                    </div>
+                </article>
+
+                <!-- Card 3: Bảng giá dịch vụ -->
+                <article class="card featured">
+                    <div class="card-header">
+                        <h2>3. Bảng giá dịch vụ</h2>
+                        <p class="slogan">
+                            💪 Tự code, tự làm, không bảo "AI" làm hộ – Chúc bạn
+                            hoàn thành tốt bài tập! 🚀
+                        </p>
+                    </div>
+                    <div class="card-body">
+                        <ul class="feature-list">
+                            <li>Tạo pricing-table.html</li>
+                            <li>
+                                Thiết kế 3 khối (Basic, Pro, Premium) cạnh nhau
+                            </li>
+                            <li>Hover nổi khối (box-shadow)</li>
+                            <li>Dùng :nth-child(2) nổi bật gói giữa</li>
+                            <li>
+                                Dùng ::before thêm icon check trước tính năng
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="card-footer">
+                        <a href="./pricing-table.html" class="btn btn-featured"
+                            >Xem bài làm</a
+                        >
+                    </div>
+                </article>
+
+                <!-- Card 4: Blog post -->
+                <article class="card">
+                    <div class="card-header">
+                        <h2>4. Blog post</h2>
+                        <p class="slogan">
+                            💪 Tự code, tự làm, không bảo "AI" làm hộ – Chúc bạn
+                            hoàn thành tốt bài tập! 🚀
+                        </p>
+                    </div>
+                    <div class="card-body">
+                        <ul class="feature-list">
+                            <li>
+                                Tạo blog-post.html (tiêu đề, ảnh, nội dung,
+                                comment)
+                            </li>
+                            <li>Dùng ::first-letter làm drop cap</li>
+                            <li>Dùng ::first-line nổi bật dòng đầu</li>
+                            <li>Tùy chỉnh màu ::selection</li>
+                            <li>
+                                Dùng ::before tạo dấu ngoặc kép cho blockquote
+                            </li>
+                            <li>Dùng :not() style heading trừ h1</li>
+                            <li>Hover effect cho comment</li>
+                            <li>Dùng :nth-of-type() tạo kiểu xen kẽ</li>
+                        </ul>
+                    </div>
+                    <div class="card-footer">
+                        <a href="./blog-post.html" class="btn btn-featured"
+                            >Xem bài làm</a
+                        >
+                    </div>
+                </article>
+            </main>
+
+            <footer class="footer">
+                <p>© 2026 F8 - Học lập trình để đi làm</p>
+            </footer>
         </div>
     </body>
 </html>

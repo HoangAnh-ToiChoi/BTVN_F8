@@ -1,0 +1,347 @@
+/* ============================================
+   BTVN Buổi 4 - Card Grid Layout (Fixed)
+   ============================================ */
+
+/* CSS Variables */
+:root {
+    --primary-color: #22c55e;
+    --primary-hover: #16a34a;
+    --primary-light: #dcfce7;
+    --text-dark: #1f2937;
+    --text-gray: #6b7280;
+    --text-light: #9ca3af;
+    --bg-white: #ffffff;
+    --bg-light: #f8fafc;
+    --border-color: #e5e7eb;
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
+    --shadow-md: 0 4px 15px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 40px rgba(0, 0, 0, 0.15);
+    --radius: 16px;
+    --transition: all 0.3s ease;
+}
+
+/* Reset & Base */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family:
+        "Inter",
+        -apple-system,
+        BlinkMacSystemFont,
+        sans-serif;
+    background: linear-gradient(135deg, #f0fdf4 0%, #ecfdf5 50%, #f0f9ff 100%);
+    color: var(--text-dark);
+    line-height: 1.6;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header */
+.header {
+    text-align: center;
+    margin-bottom: 50px;
+    padding: 40px 20px;
+}
+
+.header h1 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 12px;
+    letter-spacing: -0.02em;
+}
+
+.subtitle {
+    font-size: 1.125rem;
+    color: var(--text-gray);
+    font-weight: 500;
+}
+
+/* Cards Grid - Auto-fit responsive */
+.cards-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+/* Card */
+.card {
+    background: var(--bg-white);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-sm);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    transition: var(--transition);
+    flex: 0 1 350px;
+    max-width: 400px;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--primary-color);
+}
+
+/* Card Header */
+.card-header {
+    padding: 24px 20px 16px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.card-header h2 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 10px;
+    letter-spacing: -0.01em;
+}
+
+.slogan {
+    font-style: italic;
+    font-size: 0.8rem;
+    color: var(--text-light);
+    line-height: 1.5;
+}
+
+/* Card Body */
+.card-body {
+    padding: 20px;
+    flex: 1;
+}
+
+/* Feature List */
+.feature-list {
+    list-style: none;
+}
+
+.feature-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 8px 0;
+    font-size: 0.875rem;
+    color: var(--text-gray);
+    line-height: 1.5;
+    border-bottom: 1px dashed rgba(229, 231, 235, 0.6);
+}
+
+.feature-list li a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.feature-list li a:hover {
+    color: var(--primary-hover);
+    text-decoration: underline;
+}
+
+.feature-list li:last-child {
+    border-bottom: none;
+}
+
+.feature-list li::before {
+    content: "✓";
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 18px;
+    height: 18px;
+    min-width: 18px;
+    background: var(--primary-light);
+    color: var(--primary-color);
+    font-size: 0.7rem;
+    font-weight: 700;
+    border-radius: 50%;
+    margin-top: 2px;
+}
+
+/* Card Footer */
+.card-footer {
+    padding: 16px 20px 24px;
+    margin-top: auto;
+}
+
+/* Button */
+.btn {
+    display: block;
+    width: 100%;
+    padding: 12px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border-radius: 10px;
+    transition: var(--transition);
+    background: var(--bg-light);
+    color: var(--text-dark);
+    border: 1px solid var(--border-color);
+}
+
+.btn:hover {
+    background: var(--text-dark);
+    color: var(--bg-white);
+    border-color: var(--text-dark);
+}
+
+.btn-featured {
+    background: linear-gradient(135deg, var(--primary-color) 0%, #16a34a 100%);
+    color: var(--bg-white);
+    border: none;
+    box-shadow: 0 4px 15px rgba(34, 197, 94, 0.3);
+}
+
+.btn-featured:hover {
+    background: linear-gradient(135deg, #16a34a 0%, #15803d 100%);
+    color: var(--bg-white);
+    box-shadow: 0 6px 20px rgba(34, 197, 94, 0.4);
+    transform: scale(1.02);
+}
+
+/* Footer - Separated from grid */
+.footer {
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 50px;
+    color: var(--text-light);
+    font-size: 0.875rem;
+    border-top: 1px solid var(--border-color);
+}
+
+/* ============================================
+   Responsive Design
+   ============================================ */
+
+/* Tablets */
+@media (max-width: 768px) {
+    .cards-grid {
+        gap: 20px;
+    }
+
+    .card {
+        flex: 0 1 100%;
+        max-width: 500px;
+    }
+
+    .card-header {
+        padding: 20px 16px 14px;
+    }
+
+    .card-header h2 {
+        font-size: 1.1rem;
+    }
+
+    .card-body {
+        padding: 16px;
+    }
+
+    .feature-list li {
+        font-size: 0.8rem;
+        padding: 6px 0;
+    }
+}
+
+/* Mobile - 1 column (stacked) */
+@media (max-width: 640px) {
+    body {
+        padding: 12px;
+    }
+
+    .container {
+        padding: 12px;
+    }
+
+    .header {
+        margin-bottom: 30px;
+        padding: 24px 16px;
+    }
+
+    .header h1 {
+        font-size: 1.75rem;
+    }
+
+    .subtitle {
+        font-size: 1rem;
+    }
+
+    .card {
+        flex: 0 1 100%;
+        max-width: 100%;
+    }
+
+    .card-header {
+        padding: 24px 20px 16px;
+    }
+
+    .card-header h2 {
+        font-size: 1.2rem;
+    }
+
+    .card-body {
+        padding: 20px;
+    }
+
+    .feature-list li {
+        font-size: 0.875rem;
+        padding: 8px 0;
+    }
+
+    .card-footer {
+        padding: 16px 20px 24px;
+    }
+
+    .btn {
+        padding: 14px 20px;
+        font-size: 0.95rem;
+    }
+
+    .footer {
+        margin-top: 30px;
+    }
+}
+
+/* Hover States - Touch Devices */
+@media (hover: none) {
+    .card:hover {
+        transform: none;
+        box-shadow: var(--shadow-sm);
+    }
+
+    .btn-featured:hover {
+        transform: none;
+    }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
