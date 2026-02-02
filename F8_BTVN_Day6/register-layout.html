@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Register</title>
+        <link rel="stylesheet" href="./asset/reset.css" />
+        <link rel="stylesheet" href="./asset/default.css" />
+        <link rel="stylesheet" href="./asset/styles.css" />
+    </head>
+    <body>
+        <div class="container" style="background-color: var(--primary-color)">
+            <div class="register-layout">
+                <main class="card-register">
+                    <figure>
+                        <img
+                            class="background-register"
+                            src="/F8_BYVN_Day5/asset/img/anh-nen_LowG.jpg"
+                            alt="image-register"
+                        />
+                    </figure>
+                    <div class="form-register">
+                        <h1>Register</h1>
+                        <div class="form-container">
+                            <form
+                                class="form-register"
+                                action=""
+                                autocomplete="off"
+                                spellcheck="false"
+                            >
+                                <div class="row">
+                                    <label for="username"> Username: </label>
+                                    <input type="text" id="username" required />
+                                </div>
+                                <div class="row">
+                                    <label for="email"> Email: </label>
+                                    <input id="email" type="email" required />
+                                </div>
+                                <div class="row">
+                                    <label for="password"> Password: </label>
+                                    <input
+                                        type="password"
+                                        id="password"
+                                        required
+                                    />
+                                </div>
+                                <div class="row">
+                                    <label for="confirm-password">
+                                        Confirm Password:
+                                    </label>
+                                    <input
+                                        type="password"
+                                        id="confirm-password"
+                                        required
+                                    />
+                                </div>
+                                <div class="row">
+                                    <label>
+                                        <input
+                                            type="checkbox"
+                                            id="checkbox"
+                                            required
+                                        />
+                                        I agree all statements
+                                        <a href="#">in Terms of Service</a>
+                                    </label>
+                                </div>
+                                <div class="row">
+                                    <button class="btn">Register</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>
+    </body>
+</html>

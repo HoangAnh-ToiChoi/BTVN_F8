@@ -1,0 +1,661 @@
+html {
+    font-size: 20px;
+}
+
+:root {
+    --primary-color: #ccc;
+}
+
+.mt_12 {
+    margin-top: 12px;
+}
+
+.mt-8 {
+    margin-top: 8px;
+}
+
+.fw_600 {
+    font-weight: 600;
+}
+
+/* Bài 1 */
+
+.resume-a4-paper {
+    width: 210mm;
+    min-height: 297mm;
+    background-color: white;
+    position: relative;
+    display: flex;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    margin: 18px auto;
+    gap: 28px;
+}
+
+.orange-header-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 240px;
+    background-color: #ff6b00;
+    z-index: 1;
+}
+
+.av-contact {
+    z-index: 10;
+    align-items: center;
+    border-radius: 180px;
+    box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.left-sidebar-card {
+    width: 32%;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+    margin-left: 28px;
+    background-color: white;
+    border-radius: 180px;
+}
+
+.profile-pill {
+    background-color: white;
+    width: 100%;
+    padding: 40px 20px;
+    border-radius: 200px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+    border: 1px solid #f0f0f0;
+}
+
+.sidebar-title-badge {
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #333;
+    border-bottom: 2px solid #ff6b00;
+    padding-bottom: 5px;
+
+    width: 70%;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.skill-box-sidebar {
+    width: 100%;
+    margin-bottom: 30px;
+    text-align: left;
+    padding-left: 10px;
+    margin-top: 50px;
+    margin-left: 40px;
+}
+
+.skill-list-sidebar {
+    list-style: none;
+    padding-left: 0;
+}
+
+.skill-list-sidebar li {
+    margin-bottom: 8px;
+    font-size: 0.7rem;
+    color: #444;
+}
+
+.award-item {
+    font-size: 0.65rem;
+    line-height: 1.6;
+    color: #444;
+}
+
+.skill-list-sidebar li {
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.skill-list-sidebar strong {
+    display: block;
+    font-size: 0.7rem;
+    margin-bottom: 3px;
+}
+
+.skill-list-sidebar p {
+    font-size: 0.65rem;
+    color: #666;
+    margin: 0;
+    line-height: 1.4;
+}
+
+.avatar-box {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 5px solid #fff;
+    box-shadow: 0 5px 15px rgba(255, 107, 0, 0.3);
+    margin-bottom: 30px;
+    margin-top: 50px;
+    align-items: center;
+    margin-left: 42px;
+}
+.avatar-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.contact-list {
+    margin-right: 10px;
+    min-height: 180px;
+    width: 100%;
+    text-align: left;
+    margin-bottom: 68px;
+    font-size: 0.7rem;
+    margin-top: 50px;
+    margin-left: 28px;
+    max-width: fit-content;
+}
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+    color: #555;
+    padding-bottom: 8px;
+    border-bottom: 1px dashed #eee;
+}
+
+.contact-icon {
+    width: 28px;
+    height: 28px;
+    background: #fff0e6;
+    color: #ff6b00;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.6rem;
+}
+
+.skill-box {
+    text-align: left;
+    background: transparent;
+    box-shadow: none;
+    flex-direction: column;
+    align-items: center;
+    z-index: 10;
+    display: inline-flex;
+    width: 36%;
+}
+
+.sidebar-title {
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #ff6b00;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+.skill-item {
+    margin-bottom: 15px;
+}
+.skill-name {
+    font-weight: 600;
+    display: block;
+    margin-bottom: 5px;
+    font-size: 0.7rem;
+}
+.skill-desc {
+    font-size: 0.65rem;
+    color: #666;
+    line-height: 1.4;
+}
+
+.right-content-area {
+    width: 64%;
+    z-index: 5;
+    padding: 40px 40px 40px 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.header-info {
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    margin-bottom: 20px;
+}
+.header-info h1 {
+    font-size: 1.8rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin: 0 0 10px 0;
+}
+.header-info h2 {
+    font-size: 0.9rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    opacity: 0.95;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 5px 15px;
+    border-radius: 20px;
+    display: inline-block;
+}
+
+.main-section {
+    margin-bottom: 30px;
+}
+
+.main-section:nth-child(3) {
+    margin-bottom: 12px;
+}
+
+.section-head {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.section-head-icon {
+    font-size: 1rem;
+    color: #ff6b00;
+    margin-right: 10px;
+}
+.section-head-text {
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #333;
+    border-bottom: 2px solid #ff6b00;
+    padding-bottom: 5px;
+}
+
+.job-card {
+    margin-bottom: 14px;
+}
+.job-title {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #222;
+}
+.job-sub {
+    font-size: 0.7rem;
+    color: #e11d48;
+    font-weight: 500;
+    margin: 5px 0;
+    font-style: italic;
+}
+.job-desc ul {
+    margin-left: 20px;
+    font-size: 0.7rem;
+    line-height: 1.6;
+    color: #555;
+}
+.job-desc li {
+    margin-bottom: 5px;
+}
+
+/* Bài 2 */
+
+.container {
+    max-width: 1200px;
+    min-height: 100vh;
+    background: white;
+    margin: 0 auto;
+    padding: 60px 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.container .box {
+    background: #f7f7f7;
+    width: 340px;
+    height: 600px;
+    border-radius: 10px;
+    padding: 20px 0;
+    display: flex;
+}
+
+.container .box:hover {
+    cursor: pointer;
+    box-shadow: 0 0 15px 10px rgba(0, 0, 0, 0.08);
+}
+
+.container .box:nth-child(2) {
+    border: 2px solid #23db76;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+}
+
+.content > h3,
+.content > p {
+    padding-left: 12px;
+}
+
+.content > h3:first-child {
+    padding-top: 0;
+    font-size: 1.5rem;
+    margin-bottom: 6px;
+}
+
+.content > p.mt-8 {
+    margin-bottom: 12px;
+    font-size: 0.8rem;
+}
+
+.content > h3:nth-of-type(2) {
+    font-size: 1.75rem;
+    margin-bottom: 2px;
+}
+
+.content > .btn-current,
+.content > .btn-up {
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 12px;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 0.85rem;
+}
+
+.content > .btn-current {
+    background: #e5e5e5;
+    color: #666;
+    border: 1px solid #ccc;
+}
+
+.content > .btn-up {
+    background-color: #4c9c62;
+    color: white;
+}
+
+.content .tick {
+    font-size: 0.7rem;
+    margin-top: 12px;
+    margin-left: 12px;
+}
+
+.content h3:nth-of-type(2)::before {
+    content: "$";
+    font-size: 0.9rem;
+}
+
+.content .tick::before {
+    content: "✓ ";
+    color: white;
+    display: inline-flex;
+    background: #4e9e61;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    width: 18px;
+    height: 18px;
+    font-size: 0.7rem;
+    margin-right: 6px;
+}
+
+.content .discount::after {
+    content: "199.99";
+    padding-left: 10px;
+    opacity: 0.3;
+    font-weight: 300;
+    font-size: 1rem;
+    text-decoration: line-through;
+}
+
+.content .price + p {
+    opacity: 0.4;
+}
+
+.content button {
+    cursor: pointer;
+}
+
+.content button:hover {
+    opacity: 0.8;
+}
+
+/* Bài 3 */
+
+.container {
+    max-width: 1200px;
+    min-height: 100vh;
+    background: rgb(246, 246, 246);
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.container .product-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-grow: 1;
+}
+
+.container .product-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.product-list .product-item {
+    width: 300px;
+    height: 500px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background: #fff;
+}
+
+.product-list .product-item:hover {
+    cursor: pointer;
+    box-shadow: 0 0 15px 10px rgba(0, 0, 0, 0.08);
+}
+
+.product-list .product-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.product-list .product-item .product-info,
+.product-item .product-footer {
+    padding: 12px 20px;
+}
+
+.product-item .product-info h4 {
+    font-size: 0.7rem;
+    opacity: 0.5;
+    font-weight: 500;
+    margin: 8px 0;
+}
+
+.product-item .product-info h4::before {
+    content: "📁";
+    color: #ccc;
+    margin-right: 6px;
+}
+
+.product-item .product-info p {
+    font-size: 0.7rem;
+    opacity: 0.8;
+    font-weight: 400;
+    margin: 8px 0;
+}
+
+.product-item .product-info h3:nth-of-type(2):before {
+    content: "$";
+    font-size: 0.9rem;
+    margin-right: 6px;
+}
+
+.product-item .product-footer {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.product-item .product-footer button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.7rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.product-item .product-footer button:first-child {
+    width: 100%;
+    margin-top: -20px;
+    background: #4e9e61;
+    color: white;
+}
+
+.product-item .product-footer button:not(:first-child) {
+    flex-grow: 1;
+}
+
+.product-item .product-footer button:nth-child(2) {
+    background: #3f85d9;
+    color: white;
+}
+
+.product-item .product-footer button:last-child {
+    background: #e11d48;
+    color: white;
+}
+
+/* Bài 4 */
+
+.register-layout {
+    width: 1200px;
+}
+
+.card-register {
+    display: flex;
+    margin: 120px auto;
+}
+
+.card-register:hover {
+    box-shadow: 0 0 20px 20px rgba(0, 0, 0, 0.08);
+}
+
+.card-register figure {
+    width: 500px;
+}
+
+.card-register .background-register {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.form-register {
+    background: #ebebeb;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex: 2;
+}
+.form-register h1 {
+    margin: 10px auto 40px;
+}
+.form-register {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.form-register .row {
+    display: flex;
+    padding: 0 12px;
+    align-items: center;
+}
+
+.form-register .row label {
+    min-width: 200px;
+}
+
+.form-register .row input {
+    flex: 1;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.form-register .row input:focus {
+    padding: 4px 8px;
+    outline: none;
+}
+
+.form-register .row:nth-last-child(2) {
+    flex-direction: row-reverse;
+}
+
+.form-register .row a {
+    color: black;
+}
+
+.form-register .row:last-child {
+    justify-content: center;
+}
+
+.form-register .row button {
+    padding: 12px 16px;
+    width: 80%;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 8px;
+    background: #56c3c9;
+    color: white;
+    cursor: pointer;
+}
+
+.form-register .row button:hover {
+    opacity: 0.8;
+}
+
+/* Bài 5 */
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.wrapper heading {
+    margin: 80px;
+}
+
+.wrapper div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 60px 20px 180px 20px;
+    gap: 20px;
+    flex-wrap: nowrap;
+}
+
+.wrapper .img-froggy img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
