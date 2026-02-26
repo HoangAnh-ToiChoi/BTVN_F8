@@ -1,0 +1,105 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.trand {
+    position: relative;
+    height: 30px;
+    width: 20px;
+}
+
+.top,
+.bottom {
+    background-color: #000;
+    position: absolute;
+    border-radius: 50%;
+    animation: move 3s ease-in-out infinite;
+}
+
+.trand:nth-child(1) .top {
+    animation-delay: 0s;
+}
+.trand:nth-child(1) .bottom {
+    animation-delay: 1.5s;
+}
+
+.trand:nth-child(2) .top {
+    animation-delay: 0.2s;
+}
+.trand:nth-child(2) .bottom {
+    animation-delay: 1.7s;
+}
+
+.trand:nth-child(3) .top {
+    animation-delay: 0.4s;
+}
+.trand:nth-child(3) .bottom {
+    animation-delay: 1.9s;
+}
+
+.trand:nth-child(4) .top {
+    animation-delay: 0.6s;
+}
+.trand:nth-child(4) .bottom {
+    animation-delay: 2.1s;
+}
+
+.trand:nth-child(5) .top {
+    animation-delay: 0.8s;
+}
+.trand:nth-child(5) .bottom {
+    animation-delay: 2.3s;
+}
+
+.trand:nth-child(6) .top {
+    animation-delay: 1s;
+}
+.trand:nth-child(6) .bottom {
+    animation-delay: 2.5s;
+}
+
+.trand:nth-child(7) .top {
+    animation-delay: 1.2s;
+}
+.trand:nth-child(7) .bottom {
+    animation-delay: 2.7s;
+}
+
+@keyframes move {
+    0% {
+        top: 100%;
+        z-index: -3;
+    }
+    25% {
+        height: 8px;
+        width: 8px;
+        z-index: -3;
+        opacity: 0;
+    }
+
+    50% {
+        top: 0%;
+        z-index: -3;
+    }
+    75% {
+        height: 12px;
+        width: 12px;
+        z-index: 3;
+    }
+    100% {
+        top: 100%;
+        z-index: 3;
+    }
+}
