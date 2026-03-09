@@ -1,0 +1,185 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+.wrapper {
+    width: 100%;
+    height: 100vh;
+    background-color: #eeeeee;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.form-group {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    position: relative;
+}
+
+.form-group .form-content {
+    font-size: 1.8rem;
+}
+.form-content .label-on {
+    position: absolute;
+    top: 70%;
+    left: -30%;
+}
+
+.form-content .label-off {
+    position: absolute;
+    top: 15%;
+    left: -30%;
+}
+
+.action-btn {
+    display: inline-block;
+    position: relative;
+    margin: 0 40px;
+}
+
+/* Checkbox */
+.btn-square::before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+}
+
+.input-square {
+    width: 20px;
+    height: 20px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+}
+
+.btn-square:has(.input-square[type="checkbox"]:checked)::before {
+    content: "";
+    background: #009486;
+    border-color: #009486;
+}
+
+.btn-square:has(.input-square[type="checkbox"]:checked)::after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    top: 3px;
+    left: 8px;
+    width: 6px;
+    height: 12px;
+    border: solid #fff;
+    border-width: 0 2px 2px 0;
+    rotate: 45deg;
+}
+
+/* Raido */
+.btn-circle::before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #ccc;
+    border-radius: 50%;
+}
+
+.input-circle {
+    width: 20px;
+    height: 20px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+}
+
+.btn-circle:has(.input-circle[type="radio"]:checked)::before {
+    content: "";
+    border-color: #009486;
+}
+
+.btn-circle:has(.input-circle[type="radio"]:checked)::after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    top: 4px;
+    left: 4px;
+    width: 12px;
+    height: 12px;
+    border: solid #fff;
+    background: #009486;
+    border-radius: 50%;
+}
+
+/* Switch */
+.btn-round::before {
+    content: "";
+    display: inline-block;
+    width: 55px;
+    height: 18px;
+    border: 2px solid #ccc;
+    border-radius: 15px;
+}
+
+.input-round {
+    width: 20px;
+    height: 20px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+}
+
+.btn-round:has(.input-round[type="checkbox"]:checked)::before {
+    content: "";
+    background: #6dbeb7;
+    border-color: #6dbeb7;
+}
+
+.btn-round:has(.input-round[type="checkbox"])::before {
+    content: "";
+    border-color: #ccc;
+    background: #ccc;
+}
+
+.btn-round:has(.input-round[type="checkbox"]:checked)::after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    top: -6px;
+    right: 0px;
+    width: 32px;
+    height: 32px;
+    background: #009486;
+    border-radius: 50%;
+    transition: right 0.5s ease;
+}
+
+.btn-round:has(.input-round[type="checkbox"])::after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    top: -6px;
+    right: 28px;
+    width: 32px;
+    height: 32px;
+    background: #fafafa;
+    border-radius: 50%;
+    transition: right 0.5s ease;
+}

@@ -89,13 +89,58 @@ button {
     letter-spacing: 1.1px;
 }
 
+.action-wrapper {
+    position: relative;
+}
 .action-wrapper i {
     font-size: 1.8rem;
     color: var(--white);
 }
 
-.action-wrapper i:first-of-type {
-    padding-right: 28px;
+.action-wrapper .action-btn i:first-of-type {
+    padding-right: 40px;
+}
+
+#search-info ~ .search-form {
+    display: none;
+}
+
+#search-info:checked ~ .search-form {
+    display: block;
+    position: absolute;
+    top: 25px;
+    right: 45px;
+    width: 280px;
+    height: 55px;
+    background: var(--white);
+    padding: 5px;
+    outline: none;
+}
+
+.search-form .input-search {
+    background: transparent;
+    width: 85%;
+    height: 100%;
+    padding: 0 20px;
+    border: none;
+    outline: none;
+}
+
+.search-form .search-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 4px;
+    right: 10px;
+    width: 46px;
+    height: 46px;
+    background: var(--primary-color);
+}
+
+.search-form .search-btn i {
+    color: var(--white);
+    font-size: 1.4rem;
 }
 
 .heading-container {
