@@ -1,0 +1,929 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./asset/css/reset.css" />
+        <link rel="stylesheet" href="./asset/css/gird.css" />
+        <link rel="stylesheet" href="./asset/css/default.css" />
+        <link rel="stylesheet" href="./asset/css/styles.css" />
+        <link rel="stylesheet" href="./asset/css/responsive.css" />
+
+        <!-- icon -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+            integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+
+        <!-- font word-->
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Roboto+Slab:wght@100..900&display=swap"
+            rel="stylesheet"
+        />
+        <title>Document</title>
+    </head>
+    <body>
+        <div class="wrapper">
+            <header class="header bg-cream">
+                <!-- start nav -->
+                <nav class="container">
+                    <div class="row gx-md-1">
+                        <div class="col-3 col-lg-2 col-md-2 col-sm-1">
+                            <a href="#" class="logo">
+                                <img
+                                    src="./asset/img/img-header/Logo.png"
+                                    alt="logo"
+                                />
+                            </a>
+                        </div>
+                        <div class="col-6 col-lg-7 col-md-7 col-sm-6">
+                            <!-- Hamburger toggle -->
+                            <input
+                                type="checkbox"
+                                id="nav-toggle"
+                                class="nav-toggle"
+                                hidden
+                            />
+                            <label for="nav-toggle" class="hamburger">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </label>
+                            <div class="nav">
+                                <ul class="sub-nav">
+                                    <li class="nav-item">
+                                        <a href="">home</a>
+                                        <i class="fa-solid fa-chevron-down"></i>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="">about</a
+                                        ><i
+                                            class="fa-solid fa-chevron-down"
+                                        ></i>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="">Practice Area</a>
+                                        <i class="fa-solid fa-chevron-down"></i>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="">Attorneys</a
+                                        ><i
+                                            class="fa-solid fa-chevron-down"
+                                        ></i>
+                                    </li>
+
+                                    <li class="nav-item">
+                                        <a href="">Page</a
+                                        ><i
+                                            class="fa-solid fa-chevron-down"
+                                        ></i>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-3 col-lg-3 col-md-3 col-sm-6">
+                            <div class="info-contact">
+                                <span>call:&nbsp<br /></span>
+                                <a href="tel:(000) 123 456 789"
+                                    >(000) 123 456 789</a
+                                >
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+                <!-- end nav -->
+
+                <!-- Start hero -->
+                <section class="hero">
+                    <div class="container">
+                        <div
+                            class="row row-cols-2 gx-xl-5 row-cols-lg-2 gx-lg-4 row-cols-md-2 gx-md-5 row-cols-sm-1 gy-sm-4 gx-sm-0 row-cols-xs-1 gx-xs-0"
+                        >
+                            <div class="col">
+                                <div class="hero-content">
+                                    <p class="hero-tagline">
+                                        #1 Law Firm in New York
+                                    </p>
+                                    <h1 class="hero-title">
+                                        Where People Meets Personalized Support.
+                                    </h1>
+                                    <p class="hero-description">
+                                        Where every injury is personal. We are a
+                                        different kind of law firm. Let our
+                                        small, passionate group of trial lawyers
+                                        fight for your rights!
+                                    </p>
+                                    <button class="btn-contact">
+                                        Get a Consultations
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="hero-media">
+                                    <div class="wrapper-bg">
+                                        <div class="img-yellow">
+                                            <img
+                                                src="./asset/img/img-header/Shape.png"
+                                                alt=""
+                                            />
+                                        </div>
+                                        <div class="img-right">
+                                            <img
+                                                src="./asset/img/img-header/Mask group.png"
+                                                alt=""
+                                            />
+                                        </div>
+                                        <div class="img-media">
+                                            <img
+                                                src="./asset/img/img-header/Images.png"
+                                                alt=""
+                                            />
+                                        </div>
+                                        <div class="img-play">
+                                            <img
+                                                src="./asset/img/img-header/Play.png"
+                                                alt=""
+                                            />
+                                            <div class="img-animation">
+                                                <img
+                                                    src="./asset/img/img-header/Group 1.png"
+                                                    alt=""
+                                                />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- End hero -->
+            </header>
+        </div>
+
+        <!-- start about -->
+        <section class="wrapper about bg-black">
+            <div class="container">
+                <div
+                    class="row gx-5 row-cols-6 row-cols-lg-6 gx-lg-4 row-cols-sm-1 gx-sm-0 gx-xs-0"
+                >
+                    <div class="col">
+                        <div class="img-about">
+                            <div class="img-info">
+                                <img
+                                    src="./asset/img/img-about/Rectangle 2.png"
+                                    alt=""
+                                />
+                                <div class="img-direction">
+                                    <img
+                                        src="./asset/img/img-about/Mask group.png"
+                                        alt=""
+                                    />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="about-content">
+                            <p class="about-tagline">#About us</p>
+                            <h2 class="about-title">
+                                Get the Guidance, Support, and Counsel
+                            </h2>
+                            <p class="about-description">
+                                Every year hundreds of clients choose our firm
+                                because of our dedication to advocating for our
+                                clients before, during and after closing.
+                            </p>
+                            <ul class="about-list">
+                                <li>
+                                    <h3>
+                                        <b>1782<br /></b>
+                                    </h3>
+                                    <p>Law Cases</p>
+                                </li>
+                                <li>
+                                    <h3>
+                                        <b>10+<br /></b>
+                                    </h3>
+                                    <p>Lawyer</p>
+                                </li>
+                                <li>
+                                    <h3>
+                                        <b>98% <br /> </b>
+                                    </h3>
+                                    <p>Happy Clients</p>
+                                </li>
+                            </ul>
+                            <button class="about-btn">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end about -->
+
+        <!-- start service -->
+        <section class="wrapper service bg-white">
+            <div class="container">
+                <div class="service-heading">
+                    <p class="service-tagline">#Services</p>
+                    <h2 class="service-title">Our Practice Areas</h2>
+                    <p class="service-description">
+                        Our Law Office provides a professional experience for
+                        all our clients, helping them navigate their legal
+                        rights.
+                    </p>
+                </div>
+                <div
+                    class="row g-3 row-cols-3 row-cols-sm-2 g-sm-4 row-cols-xs-1 gx-xs-0"
+                >
+                    <div class="col">
+                        <div class="service-item">
+                            <div class="img-service">
+                                <img
+                                    src="./asset/img/img-service/Card 1.png"
+                                    alt=""
+                                />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="service-item">
+                            <div class="img-service">
+                                <img
+                                    src="./asset/img/img-service/Card 2.png"
+                                    alt=""
+                                />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="service-item">
+                            <div class="img-service">
+                                <img
+                                    src="./asset/img/img-service/Card 3.png"
+                                    alt=""
+                                />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="service-item">
+                            <div class="img-service">
+                                <img
+                                    src="./asset/img/img-service/Card 4.png"
+                                    alt=""
+                                />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="service-item">
+                            <div class="img-service">
+                                <img
+                                    src="./asset/img/img-service/Card 5.png"
+                                    alt=""
+                                />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="service-item">
+                            <div class="img-service">
+                                <img
+                                    src="./asset/img/img-service/Card 6.png"
+                                    alt=""
+                                />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="service-btn">
+                    <button>View All</button>
+                </div>
+            </div>
+        </section>
+        <!-- end service -->
+
+        <!-- start features -->
+        <section class="wrapper features bg-white">
+            <div class="container">
+                <div class="row row-cols-2 gx-5 gx-lg-4 row-cols-sm-1 gx-xs-0">
+                    <div class="col">
+                        <div class="img-feature">
+                            <img
+                                src="./asset/img/img-feature/Rectangle 4590.png"
+                                alt="img feature"
+                            />
+                            <div class="img-direction">
+                                <img
+                                    src="./asset/img/img-feature/Mask group.png"
+                                    alt="img direction"
+                                />
+                            </div>
+                            <span></span>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="features-content">
+                            <p class="features-tagline">#Features</p>
+                            <h2 class="features-title">
+                                A Heritage of Legal Talent in the US
+                            </h2>
+                            <p class="features-description">
+                                When you are seeking the services of a
+                                nationally recognized law firm, you have every
+                                right to expect an extra measure of expertise.
+                            </p>
+                            <ul class="features-list">
+                                <li>Fast and Responsive</li>
+                                <li>Top Notch Communication</li>
+                                <li>Emotional Intelligence</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="space"></div>
+
+                <div
+                    class="row row-cols-2 gx-5 row-cols-lg-2 row-cols-sm-1 gx-sm-0 gx-xs-0"
+                >
+                    <div class="col">
+                        <div class="features-content">
+                            <p class="features-tagline">#Features</p>
+                            <h2 class="features-title">
+                                Exceptional Scope and Diverse Practices
+                            </h2>
+                            <p class="features-description">
+                                Our attorneys provide clients with extensive
+                                knowledge and experience in each specialized
+                                area of practice we offer. We are providing the
+                                best.
+                            </p>
+                            <div class="btn-features">
+                                <button>Our Services</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="img-feature">
+                            <img
+                                src="./asset/img/img-feature/Rectangle 4590_2.png"
+                                alt="img feature"
+                            />
+                            <div class="img-direction">
+                                <img
+                                    src="./asset/img/img-feature/Mask group_2.png"
+                                    alt="img direction"
+                                />
+                            </div>
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end features -->
+
+        <!-- start team -->
+        <section class="wrapper team bg-black">
+            <div class="container">
+                <div class="team-heading">
+                    <p class="team-tagline">#Team</p>
+                    <h2 class="team-title">Meet With Lawyers</h2>
+                    <p class="team-description">
+                        Our team of experienced team more than $150 Million in
+                        Settlements and Judgments for Our Clients
+                    </p>
+                </div>
+                <div
+                    class="row g-3 row-cols-3 row-cols-sm-2 g-sm-4 row-cols-xs-1 gy-xs-4 gx-xs-0"
+                >
+                    <div class="col">
+                        <div class="team-item">
+                            <div class="img-team">
+                                <img
+                                    src="./asset/img/img-team/Card 1.png"
+                                    alt=""
+                                />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="team-item">
+                            <div class="img-team">
+                                <img
+                                    src="./asset/img/img-team/Card 2.png"
+                                    alt=""
+                                />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="team-item">
+                            <div class="img-team">
+                                <img
+                                    src="./asset/img/img-team/Card 3.png"
+                                    alt=""
+                                />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="team-item">
+                            <div class="img-team">
+                                <img
+                                    src="./asset/img/img-team/Card 4.png"
+                                    alt=""
+                                />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="team-item">
+                            <div class="img-team">
+                                <img
+                                    src="./asset/img/img-team/Card 5.png"
+                                    alt=""
+                                />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="team-item">
+                            <div class="img-team">
+                                <img
+                                    src="./asset/img/img-team/Card 6.png"
+                                    alt=""
+                                />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-btn">
+                    <button>All Attorney</button>
+                </div>
+            </div>
+        </section>
+        <!-- end team -->
+
+        <!-- start awards -->
+        <section class="wrapper awards bg-cream">
+            <div class="container">
+                <div class="awards-heading">
+                    <p class="awards-tagline">#awards</p>
+                    <h2 class="awards-title">Our Honors & Awards</h2>
+                </div>
+                <div
+                    class="row g-3 row-cols-4 row-cols-sm-2 g-sm-4 row-cols-xs-1 gy-xs-4 gx-xs-0"
+                >
+                    <div class="col">
+                        <div class="awards-item">
+                            <div class="img-awards">
+                                <img
+                                    src="./asset/img/img-awards/Card 1.png"
+                                    alt=""
+                                />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="awards-item">
+                            <div class="img-awards">
+                                <img
+                                    src="./asset/img/img-awards/Card 2.png"
+                                    alt=""
+                                />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="awards-item">
+                            <div class="img-awards">
+                                <img
+                                    src="./asset/img/img-awards/Card 3.png"
+                                    alt=""
+                                />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="awards-item">
+                            <div class="img-awards">
+                                <img
+                                    src="./asset/img/img-awards/Card 4.png"
+                                    alt=""
+                                />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end awards -->
+
+        <!-- start testimonial -->
+        <section class="wrapper testimonial bg-white">
+            <div class="container">
+                <div class="testimonial-heading">
+                    <p class="testimonial-tagline">#Testimonial</p>
+                    <div class="testimonial-flex">
+                        <h2 class="testimonial-title">
+                            What Our Clients Say About Us
+                        </h2>
+                        <div class="btn-testimonial">
+                            <button class="btn-redirect_left">
+                                <i class="fa-solid fa-angle-left"></i>
+                            </button>
+                            <button class="btn-redirect_right">
+                                <i class="fa-solid fa-angle-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="row row-cols-3 gx-5 gx-lg-4 row-cols-md-3 gx-md-3 row-cols-sm-1 gy-sm-4"
+                >
+                    <div class="col">
+                        <div class="testimonial-card">
+                            <img
+                                class="avatar"
+                                src="./asset/img/img-testimonial/Rectangle 491.png"
+                                alt="avatar"
+                            />
+
+                            <p class="desc">
+                                "I am very satisfied with this Law Office. Very
+                                professional, quick responses to calls, humble
+                                and understanding. Marty has done a lot of work
+                                for me and helped my friends and myself work
+                                through some sticky issues. His staff is
+                                professional and hard working! I recommend
+                                anyone who needs a lawyer to Marty Meason and
+                                his team."
+                            </p>
+
+                            <img
+                                class="quote-icon"
+                                src="./asset/img/img-testimonial/Union.png"
+                                alt=""
+                            />
+                            <h3 class="name">Tim Southee</h3>
+
+                            <p class="job">UI/UX Designer</p>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="testimonial-card">
+                            <img
+                                class="avatar"
+                                src="./asset/img/img-testimonial/Rectangle 491 (1).png"
+                                alt="avatar"
+                            />
+
+                            <p class="desc">
+                                "I am very satisfied with this Law Office. Very
+                                professional, quick responses to calls, humble
+                                and understanding. Marty has done a lot of work
+                                for me and helped my friends and myself work
+                                through some sticky issues. His staff is
+                                professional and hard working! I recommend
+                                anyone who needs a lawyer to Marty Meason and
+                                his team."
+                            </p>
+
+                            <img
+                                class="quote-icon"
+                                src="./asset/img/img-testimonial/Union.png"
+                                alt=""
+                            />
+                            <h3 class="name">Trent Boult</h3>
+
+                            <p class="job">UI/UX Designer</p>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="testimonial-card">
+                            <img
+                                class="avatar"
+                                src="./asset/img/img-testimonial/Rectangle 491 (2).png"
+                                alt="avatar"
+                            />
+
+                            <p class="desc">
+                                "I am very satisfied with this Law Office. Very
+                                professional, quick responses to calls, humble
+                                and understanding. Marty has done a lot of work
+                                for me and helped my friends and myself work
+                                through some sticky issues. His staff is
+                                professional and hard working! I recommend
+                                anyone who needs a lawyer to Marty Meason and
+                                his team."
+                            </p>
+
+                            <img
+                                class="quote-icon"
+                                src="./asset/img/img-testimonial/Union.png"
+                                alt=""
+                            />
+                            <h3 class="name">Matt Henry</h3>
+
+                            <p class="job">UI/UX Designer</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="circle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </section>
+        <!-- end testimonial -->
+
+        <!-- start FAQ -->
+        <section class="wrapper faq bg-white">
+            <div class="container">
+                <div class="row">
+                    <div class="col-8 offset-2 faq-heading-col">
+                        <div class="faq-heading">
+                            <p class="faq-tagline">#FAQ</p>
+                            <h2 class="faq-title">
+                                Frequently Asked Questions
+                            </h2>
+                            <div class="faq-flex">
+                                <a href="!#" class="direct-question"
+                                    >General Question</a
+                                >
+                                <a href="!#" class="direct-question"
+                                    >Other Question</a
+                                >
+                            </div>
+                        </div>
+                        <div class="fqa-detail">
+                            <h2>Why should I hire an attorney?</h2>
+                            <p>
+                                When you are faced with a personal injury, the
+                                physical and emotional burden should not be
+                                taken for granted. Hiring an attorney not only
+                                provides trusted legal guidance but someone to
+                                stand in your corner when you need it most.
+                                Insurance companies are seeking their best
+                                interest and not your own, so it’s always a good
+                                idea to seek counsel.
+                            </p>
+                            <button>
+                                <i class="fa-solid fa-angle-up"></i>
+                            </button>
+                        </div>
+                        <div class="fqa-detail">
+                            <h2>Why should I hire an attorney?</h2>
+                            <button>
+                                <i class="fa-solid fa-angle-down"></i>
+                            </button>
+                        </div>
+                        <div class="fqa-detail">
+                            <h2>Why should I hire an attorney?</h2>
+                            <button>
+                                <i class="fa-solid fa-angle-down"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end FAQ -->
+
+        <!-- start blog -->
+        <section class="wrapper blog bg-white">
+            <div class="container">
+                <div class="blog-heading">
+                    <p class="blog-tagline">#blog</p>
+                    <div class="blog-flex">
+                        <div class="blog-sub-heading">
+                            <h2 class="blog-title">Latest Story & News</h2>
+                            <p class="blog-description">
+                                We’re always adding new content to help better
+                                inform our clients on issues impacting their
+                                lives.
+                            </p>
+                        </div>
+                        <button class="btn-blog">Browse All</button>
+                    </div>
+                </div>
+                <div
+                    class="row row-cols-3 gx-5 gx-lg-4 row-cols-sm-1 gy-sm-4 gx-xs-0"
+                >
+                    <div class="col">
+                        <div class="blog-card">
+                            <figure class="avatar">
+                                <img
+                                    src="./asset/img/img-blog/Rectangle 5178.png"
+                                    alt="avatar"
+                                />
+                            </figure>
+
+                            <div class="desc">
+                                <img
+                                    src="./asset/img/img-blog/Ellipse 11.png"
+                                    alt=""
+                                />
+                                <div class="name">
+                                    <h4>Mitchell Starc</h4>
+                                    <p>Attorney at Law</p>
+                                </div>
+                            </div>
+                            <h3>
+                                5 Key Rules of Law in Our Society Must Know in
+                                2022
+                            </h3>
+                            <a href="">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="blog-card">
+                            <figure class="avatar">
+                                <img
+                                    src="./asset/img/img-blog/Rectangle 5178 (1).png"
+                                    alt="avatar"
+                                />
+                            </figure>
+
+                            <div class="desc">
+                                <img
+                                    src="./asset/img/img-blog/Ellipse 11.png"
+                                    alt=""
+                                />
+                                <div class="name">
+                                    <h4>Mitchell Starc</h4>
+                                    <p>Attorney at Law</p>
+                                </div>
+                            </div>
+                            <h3>
+                                5 Key Rules of Law in Our Society Must Know in
+                                2022
+                            </h3>
+                            <a href="">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="blog-card">
+                            <figure class="avatar">
+                                <img
+                                    src="./asset/img/img-blog/Rectangle 5178 (2).png"
+                                    alt="avatar"
+                                />
+                            </figure>
+
+                            <div class="desc">
+                                <img
+                                    src="./asset/img/img-blog/Ellipse 11.png"
+                                    alt=""
+                                />
+                                <div class="name">
+                                    <h4>Mitchell Starc</h4>
+                                    <p>Attorney at Law</p>
+                                </div>
+                            </div>
+                            <h3>
+                                5 Key Rules of Law in Our Society Must Know in
+                                2022
+                            </h3>
+                            <a href="">Learn More</a>
+                        </div>
+                    </div>
+                    <!-- btn 2 -->
+                    <div class="col">
+                        <button class="btn-blog">Browse All</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end blog -->
+
+        <!-- start CTA -->
+        <section class="wrapper cta bg-green">
+            <div class="container">
+                <div class="row row-cols-8 offset-2">
+                    <div class="col">
+                        <div class="cta-heading">
+                            <p class="cta-tagline">#cta</p>
+                            <h2 class="cta-title">Dealing With a Issue?</h2>
+                            <p class="cta-desc">
+                                Where every injury is personal. We are a
+                                different kind of law firm. Let our small,
+                                passionate group of trial lawyers fight for your
+                                rights!
+                            </p>
+                            <button class="btn-cta">Get a Consultations</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end CTA -->
+
+        <!-- start footer -->
+        <footer class="wrapper footer bg-black">
+            <div class="container">
+                <div
+                    class="row row-cols-4 g-2 row-cols-md-2 gy-md-3 row-cols-xs-1 gy-xs-4"
+                >
+                    <div class="col">
+                        <p class="footer-title"><b>Justice</b></p>
+                        <ul class="footer-list">
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Terms & Conditions</a></li>
+                            <li><a href="#">Cookie Preferences</a></li>
+                        </ul>
+                    </div>
+                    <div class="col">
+                        <p class="footer-title"><b>Pages</b></p>
+                        <ul class="footer-list">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Practice Areas</a></li>
+                            <li><a href="#">Attorneys</a></li>
+                        </ul>
+                    </div>
+                    <div class="col">
+                        <p class="footer-title"><b>Justice</b></p>
+                        <ul class="footer-list">
+                            <li>
+                                <a href="#"
+                                    >50 Harrison Street, PH Suite 445 Hoboken,
+                                    NJ 07030
+                                </a>
+                            </li>
+                            <li>
+                                <a href="tel:(000) 123-4567">(000) 123-4567</a>
+                            </li>
+                            <li>
+                                <a href="mailto: yourlawfirm22@gmail.com   "
+                                    >yourlawfirm22@gmail.com
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col">
+                        <div class="map">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5346.9854614096075!2d106.79809607158596!3d10.872630662127674!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3174d8a6b19d6763%3A0x143c54525028b2e!2zTmjDoCBWxINuIGjDs2EgU2luaCB2acOqbiBUUC5IQ00!5e0!3m2!1svi!2s!4v1773373398514!5m2!1svi!2s"
+                                width="100%"
+                                height="100%"
+                                style="border: 0"
+                                allowfullscreen=""
+                                loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"
+                            ></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container footer-bottom">
+                <div class="row row-cols-6">
+                    <div class="col">
+                        <figure class="logo">
+                            <img
+                                src="./asset/img/img-logo/Logo.png"
+                                alt="logo"
+                            />
+                        </figure>
+                        <p>Copyright © 2022 UI HUT All Rights Reserved</p>
+                    </div>
+                    <div class="col">
+                        <ul class="social-media">
+                            <li>
+                                <a href="#"
+                                    ><i class="fa-brands fa-facebook-f"></i
+                                ></a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    ><i class="fa-brands fa-linkedin-in"></i
+                                ></a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    ><i class="fa-brands fa-twitter"></i
+                                ></a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    ><i class="fa-brands fa-instagram"></i
+                                ></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- end footer -->
+    </body>
+</html>
