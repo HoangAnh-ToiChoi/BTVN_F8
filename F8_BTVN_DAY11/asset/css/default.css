@@ -41,10 +41,6 @@ u {
     text-decoration: underline;
 }
 
-li {
-    /* list-style-type: disc; */
-}
-
 input,
 button,
 textarea,
