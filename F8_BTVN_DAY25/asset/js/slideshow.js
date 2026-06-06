@@ -94,6 +94,7 @@ slideShow.ontransitionend = () => {
 };
 
 startAutoplay();
+updateDots();
 
 slideShow.addEventListener("mouseenter", stopAutoplay);
 slideShow.addEventListener("mouseleave", startAutoplay);
