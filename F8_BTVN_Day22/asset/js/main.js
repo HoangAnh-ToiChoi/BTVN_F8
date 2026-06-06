@@ -18,80 +18,153 @@ const taskGrid = $(".task-grid");
 const cancelBtn = $(".btn-secondary");
 const checkBtn = $(".fa-check");
 
-let taskList = [];
+let taskList = JSON.parse(localStorage.getItem("tasks")) ?? [];
 
-addTask.onclick = function (event) {
-    event.preventDefault();
+let indexEdit = null;
+
+function openForm() {
     addModal.className = "modal-overlay show";
     setTimeout(function () {
         inputElement.focus();
     }, 50);
+}
+
+function closeForm() {
+    addModal.className = "modal-overlay";
+    const titleTask = addModal.querySelector(".modal-title");
+    if (titleTask) {
+        titleTask.textContent = titleTask.dataset.original;
+        delete titleTask.dataset.original;
+    }
+    indexEdit = null;
+}
+
+function saveTask() {
+    localStorage.setItem("tasks", JSON.stringify(taskList));
+}
+
+addTask.onclick = function (event) {
+    event.preventDefault();
+    openForm();
 };
 
 closeBtn.onclick = function (event) {
     event.preventDefault();
-    addModal.className = "modal-overlay";
+    closeForm();
+};
+
+taskGrid.onclick = function (event) {
+    const btnEdit = event.target.closest(".btnEdit");
+    if (btnEdit) {
+        openForm();
+
+        const titleTask = addModal.querySelector(".modal-title");
+        if (titleTask) {
+            titleTask.dataset.original = titleTask.textContent;
+            titleTask.textContent = "Edit task";
+        }
+
+        const indexTask = btnEdit.dataset.index;
+        const task = taskList[indexTask];
+
+        inputElement.value = task.title;
+        descriptionElement.value = task.description;
+        priorityElement.value = task.priority;
+        startTimeElement.value = task.startTime;
+        endTimeElement.value = task.endTime;
+        dueDateElement.value = task.DueDate;
+        cardColorElement.value = task.cardColor;
+
+        indexEdit = indexTask;
+    }
+
+    const btnComplete = event.target.closest(".btn-complete");
+    // console.log(btnComplete);
+    if (btnComplete) {
+        const task = taskList[btnComplete.dataset.index];
+        task.isComplete = !task.isComplete;
+        saveTask();
+        renderTasks();
+    }
+    const btnDelete = event.target.closest(".btn-Delete");
+    if (btnDelete) {
+        if (
+            confirm(
+                `Bạn có chắc chắn muốn xóa ${taskList[btnDelete.dataset.index].title}?`,
+            )
+        ) {
+            taskList.splice(btnDelete.dataset.index, 1);
+            saveTask();
+            renderTasks();
+        }
+    }
 };
 
 modalForm.onsubmit = function (event) {
     event.preventDefault();
-};
-
-createBtn.onclick = function (event) {
-    event.preventDefault();
     const newTask = {
         title: inputElement.value,
         description: descriptionElement.value,
-        category: categoryElement.value,
         priority: priorityElement.value,
         startTime: startTimeElement.value,
         endTime: endTimeElement.value,
         DueDate: dueDateElement.value,
         cardColor: cardColorElement.value,
-        isCompleted: false,
+        isComplete: false,
     };
-
-    taskList.unshift(newTask);
+    if (indexEdit) {
+        taskList[indexEdit] = newTask;
+    } else {
+        taskList.unshift(newTask);
+    }
+    saveTask();
     renderTasks();
+    closeForm();
+    modalForm.reset();
 };
 
 cancelBtn.onclick = function (event) {
     event.preventDefault();
-    addModal.className = "modal-overlay";
+    closeForm();
 };
 
 function renderTasks() {
     const html = taskList
-        .map(function (task) {
+        .map(function (task, index) {
             return `
-            <div class="task-card ${task.cardColor} ${task.isCompleted ? "completed" : ""}">
-                <div class="task-header">
-                    <h3 class="task-title">${task.title}</h3>
-                    <button class="task-menu">
-                        <i class="fa-solid fa-ellipsis fa-icon"></i>
-                        <div class="dropdown-menu">
-                            <div class="dropdown-item">
-                                <i class="fa-solid fa-pen-to-square fa-icon"></i>
-                                Edit
+        <div class="task-card ${task.cardColor} ${task.isComplete ? "completed" : ""} ">
+                    <div class="task-header">
+                        <h3 class="task-title" data-original="${task.title}">${task.title}</h3>
+                        <button class="task-menu">
+                            <i class="fa-solid fa-ellipsis fa-icon"></i>
+                            <div class="dropdown-menu">
+                                <div class="dropdown-item btnEdit" data-index = "${index}" >
+                                    <i
+                                        class="fa-solid fa-pen-to-square fa-icon"
+                                    ></i>
+                                    Edit
+                                </div>
+                                <div class="dropdown-item complete btn-complete" data-index="${index}">
+                                    <i class="fa-solid fa-check fa-icon"></i>
+                                    ${task.isComplete ? "Mark as Active" : "Mark as Complete"}
+                                </div>
+                                <div class="dropdown-item delete btn-Delete" data-index="${index}">
+                                    <i class="fa-solid fa-trash fa-icon"></i>
+                                    Delete
+                                </div>
                             </div>
-                            <div class="dropdown-item complete">
-                                <i class="fa-solid fa-check fa-icon"></i>
-                                ${task.isCompleted ? "Mark as Active" : "Mark as Complete"}
-                            </div>
-                            <div class="dropdown-item delete">
-                                <i class="fa-solid fa-trash fa-icon"></i>
-                                Delete
-                            </div>
-                        </div>
-                    </button>
+                        </button>
+                    </div>
+                    <p class="task-description">
+                        ${task.description}
+                    </p>
+                    <div class="task-time">${task.startTime}AM- ${task.endTime}PM</div>
                 </div>
-                <p class="task-description">${task.description}</p>
-                <div class="task-time">${task.startTime} - ${task.endTime}</div>
-            </div>
-        `;
+                `;
         })
         .join("");
+
     taskGrid.innerHTML = html;
-    addModal.className = "modal-overlay";
-    modalForm.reset();
 }
+
+renderTasks();

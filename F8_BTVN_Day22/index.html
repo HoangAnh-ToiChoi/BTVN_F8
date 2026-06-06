@@ -71,7 +71,7 @@
                         <button class="task-menu">
                             <i class="fa-solid fa-ellipsis fa-icon"></i>
                             <div class="dropdown-menu">
-                                <div class="dropdown-item">
+                                <div class="dropdown-item btnEdit">
                                     <i
                                         class="fa-solid fa-pen-to-square fa-icon"
                                     ></i>
@@ -231,7 +231,7 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <form class="todo-app-form">
+                    <form class="todo-app-form" id="todo-app-form">
                         <div class="form-group">
                             <label class="form-label" for="taskTitle"
                                 >Task Title *</label
@@ -332,15 +332,15 @@
                                 <option value="green">Green</option>
                             </select>
                         </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary">
+                                Cancel
+                            </button>
+                            <button type="submit" class="btn btn-primary">
+                                Create Task
+                            </button>
+                        </div>
                     </form>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary">
-                        Cancel
-                    </button>
-                    <button type="submit" class="btn btn-primary">
-                        Create Task
-                    </button>
                 </div>
             </div>
         </div>

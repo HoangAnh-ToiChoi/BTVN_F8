@@ -1,0 +1,138 @@
+* {
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 1.6rem;
+}
+
+h2 {
+    font-size: 1rem;
+}
+
+h3 {
+    font-size: 0.9rem;
+}
+
+p {
+    font-size: 0.8rem;
+}
+
+b,
+strong {
+    font-weight: bold;
+}
+
+i,
+em {
+    font-style: italic;
+}
+
+u {
+    text-decoration: underline;
+}
+
+input,
+button,
+textarea,
+select {
+    font-size: inherit;
+    font-family: inherit;
+}
+
+body {
+    font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Oxygen,
+        Ubuntu,
+        Cantarell,
+        "Open Sans",
+        "Helvetica Neue",
+        sans-serif;
+    line-height: 1.6;
+}
+
+.container {
+    position: relative;
+    display: flex;
+    width: 800px;
+    height: 300px;
+    margin: 40px auto;
+    overflow: hidden;
+}
+
+.slide-show {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    transition: all 0.3s ease-in-out;
+}
+
+.slide-item {
+    width: 100%;
+    flex-shrink: 0;
+    flex-basis: 100%;
+}
+
+.slide-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.btn-prev,
+.btn-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1000;
+    cursor: pointer;
+    background-color: #fff;
+    border: 1px solid #fff;
+    border-radius: 4px;
+    padding: 8px;
+}
+
+.btn-prev {
+    left: 10px;
+}
+
+.btn-next {
+    right: 10px;
+}
+
+.dots {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+.active {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: deeppink;
+}

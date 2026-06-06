@@ -1,5 +1,5 @@
 /* ============================================
-   BTVN Landing Page - Card Grid Layout
+   Dashboard Day 25 - Card Grid Layout
    ============================================ */
 
 /* CSS Variables */
@@ -14,8 +14,8 @@
     --bg-light: #f8fafc;
     --border-color: #e5e7eb;
     --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
-    --shadow-md: 0 4px 15px rgba(236, 72, 153, 0.15);
-    --shadow-lg: 0 10px 40px rgba(236, 72, 153, 0.2);
+    --shadow-md: 0 4px 15px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 40px rgba(0, 0, 0, 0.15);
     --radius: 16px;
     --transition: all 0.3s ease;
 }
@@ -34,11 +34,8 @@ html {
 }
 
 body {
-    font-family:
-        "Inter",
-        -apple-system,
-        BlinkMacSystemFont,
-        sans-serif;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+    /* Beautiful violet/pink subtle gradient background */
     background: linear-gradient(135deg, #faf5ff 0%, #fdf2f8 50%, #f0f9ff 100%);
     color: var(--text-dark);
     line-height: 1.6;
@@ -48,7 +45,7 @@ body {
 
 /* Container */
 .container {
-    max-width: 1400px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
 }
@@ -58,6 +55,22 @@ body {
     text-align: center;
     margin-bottom: 50px;
     padding: 40px 20px;
+    position: relative;
+}
+
+.back-link {
+    position: absolute;
+    top: 0;
+    left: 20px;
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.back-link:hover {
+    color: var(--primary-hover);
+    text-decoration: underline;
 }
 
 .header h1 {
@@ -74,22 +87,22 @@ body {
     font-weight: 500;
 }
 
-/* Cards Grid - 3 columns for cards */
+/* Cards Grid */
 .cards-grid {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 24px;
+    gap: 30px;
     margin-bottom: 50px;
     align-items: stretch;
 }
 
-/* Card Link Wrapper */
+/* Card Link Wrapper - 3 columns for 3 cards */
 .card-link {
     text-decoration: none;
     color: inherit;
     display: block;
-    width: calc(33.333% - 16px);
+    width: calc(33.333% - 20px);
 }
 
 /* Card */
@@ -107,15 +120,15 @@ body {
     cursor: pointer;
 }
 
+/* Hover effect */
 .card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-8px);
     box-shadow: var(--shadow-lg);
     border-color: var(--primary-color);
 }
 
-/* Featured Card */
+/* Featured Card styles for slightly stronger shadow */
 .card.featured {
-    /* border: 2px solid var(--primary-color); */
     box-shadow: var(--shadow-md);
 }
 
@@ -123,29 +136,10 @@ body {
     box-shadow: 0 15px 50px rgba(236, 72, 153, 0.2);
 }
 
-/* Badge */
-.badge {
-    position: absolute;
-    top: -1px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
-    color: #ffffff;
-    font-size: 0.75rem;
-    font-weight: 600;
-    padding: 6px 16px;
-    border-radius: 0 0 12px 12px;
-    box-shadow: 0 4px 12px rgba(245, 158, 11, 0.3);
-}
-
 /* Card Header */
 .card-header {
-    padding: 28px 24px 20px;
+    padding: 36px 24px 20px;
     border-bottom: 1px solid var(--border-color);
-}
-
-.card.featured .card-header {
-    padding-top: 36px;
 }
 
 .card-header h2 {
@@ -221,15 +215,6 @@ body {
     font-weight: 600;
     border-radius: 10px;
     transition: var(--transition);
-    background: var(--bg-light);
-    color: var(--text-dark);
-    border: 1px solid var(--border-color);
-}
-
-.card:hover .btn {
-    background: var(--text-dark);
-    color: var(--bg-white);
-    border-color: var(--text-dark);
 }
 
 .btn-featured {
@@ -257,104 +242,33 @@ body {
    Responsive Design
    ============================================ */
 
-/* Tablets - 2 columns */
+/* Tablets */
 @media (max-width: 1024px) {
     .card-link {
-        width: calc(50% - 12px);
+        width: calc(50% - 15px);
     }
 }
 
-/* Mobile - 1 column (stacked) */
-@media (max-width: 640px) {
-    body {
-        padding: 12px;
-    }
-
-    .container {
-        padding: 12px;
-    }
-
-    .header {
-        margin-bottom: 30px;
-        padding: 24px 16px;
-    }
-
-    .header h1 {
-        font-size: 1.75rem;
-    }
-
-    .subtitle {
-        font-size: 1rem;
-    }
-
-    .cards-grid {
-        gap: 20px;
-    }
-
+/* Mobile */
+@media (max-width: 768px) {
     .card-link {
         width: 100%;
     }
-
-    .card-header {
-        padding: 24px 20px 16px;
-    }
-
-    .card-header h2 {
-        font-size: 1.2rem;
-    }
-
-    .card-body {
-        padding: 20px;
-    }
-
-    .feature-list li {
-        font-size: 0.875rem;
-        padding: 8px 0;
-    }
-
-    .card-footer {
-        padding: 16px 20px 24px;
-    }
-
-    .btn {
-        padding: 12px 20px;
-        font-size: 0.9rem;
+    
+    .back-link {
+        position: static;
+        display: inline-block;
+        margin-bottom: 20px;
     }
 }
 
-/* Hover States - Touch Devices */
+/* Touch Devices Hover Reset */
 @media (hover: none) {
     .card:hover {
         transform: none;
         box-shadow: var(--shadow-sm);
     }
-
     .card.featured:hover {
         box-shadow: var(--shadow-md);
-    }
-
-    .card:hover .btn {
-        background: var(--bg-light);
-        color: var(--text-dark);
-        border-color: var(--border-color);
-    }
-
-    .card:hover .btn-featured {
-        background: linear-gradient(
-            135deg,
-            var(--primary-color) 0%,
-            #16a34a 100%
-        );
-    }
-}
-
-/* Reduced Motion */
-@media (prefers-reduced-motion: reduce) {
-    *,
-    *::before,
-    *::after {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
     }
 }
