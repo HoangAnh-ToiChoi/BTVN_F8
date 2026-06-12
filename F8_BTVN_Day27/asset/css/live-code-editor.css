@@ -1,0 +1,102 @@
+* {
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 1.6rem;
+}
+
+h2 {
+    font-size: 1rem;
+}
+
+h3 {
+    font-size: 0.9rem;
+}
+
+p {
+    font-size: 0.8rem;
+}
+
+b,
+strong {
+    font-weight: bold;
+}
+
+i,
+em {
+    font-style: italic;
+}
+
+u {
+    text-decoration: underline;
+}
+
+input,
+button,
+textarea,
+select {
+    font-size: inherit;
+    font-family: inherit;
+}
+
+body {
+    font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Oxygen,
+        Ubuntu,
+        Cantarell,
+        "Open Sans",
+        "Helvetica Neue",
+        sans-serif;
+    line-height: 1.6;
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+}
+
+.editor {
+    flex: 1;
+    background: #242424;
+    outline: none;
+    border: none;
+    color: #fff;
+}
+
+.result {
+    flex: 1;
+    background: #f5f7fa;
+    border: none;
+    outline: none;
+}
+
+.context-menu {
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    cursor: pointer;
+}
+
+.delete-cache {
+    padding: 10px;
+    border: none;
+    background: #ff4757;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.2rem;
+}

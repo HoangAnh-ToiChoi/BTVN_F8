@@ -1,0 +1,419 @@
+/* ==========================================================================
+   Tender App Stylesheet (Tinder-like Premium Design)
+   Full Viewport & Optimized for Mobile Experience
+   ========================================================================== */
+
+:root {
+    --bg-dark: #1e1e24; /* Soothing slate-gray background */
+    --bg-app: #25252b; /* App frame container background */
+    --bg-card: #2f3037; /* Comfortable medium gray for cards and buttons */
+    --bg-header: rgba(37, 37, 43, 0.85);
+    --border-color: rgba(255, 255, 255, 0.08);
+    --text-main: #f3f3f6; /* Off-white readable text */
+    --text-muted: #a0a2ad; /* Softer gray for muted text */
+
+    /* Action Colors */
+    --color-like: #2de1a2;
+    --color-nope: #fe3c72;
+    --color-super: #1786ff;
+
+    --gradient-brand: linear-gradient(135deg, #fd267d 0%, #ff6036 100%);
+    --gradient-overlay: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.85) 0%,
+        rgba(0, 0, 0, 0.35) 45%,
+        transparent 100%
+    );
+    --shadow-main: 0 10px 30px rgba(0, 0, 0, 0.3);
+    --shadow-btn: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Base resets & styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    -webkit-tap-highlight-color: transparent;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    height: 100dvh;
+    overflow: hidden;
+    background-color: var(--bg-dark);
+    font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+    color: var(--text-main);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* App Wrapper: Centered phone layout on desktop, full screen on mobile */
+.app {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    max-width: 420px;
+    background-color: var(--bg-app);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+}
+
+@media (min-width: 421px) {
+    .app {
+        height: 85vh;
+        max-height: 820px;
+        border-radius: 36px;
+        box-shadow:
+            0 20px 50px rgba(0, 0, 0, 0.6),
+            0 0 0 10px rgba(255, 255, 255, 0.03);
+    }
+}
+
+/* Header Section */
+.app-header {
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid var(--border-color);
+    z-index: 10;
+    background: var(--bg-header);
+    backdrop-filter: blur(10px);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.logo svg {
+    width: 28px;
+    height: 28px;
+    filter: drop-shadow(0 2px 6px rgba(253, 38, 125, 0.4));
+}
+
+.logo span {
+    font-size: 22px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    background: var(--gradient-brand);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Card Stack Area */
+.card-area {
+    flex: 1;
+    position: relative;
+    padding: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.card-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    max-height: 520px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Card Element */
+.tender-card {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--bg-card);
+    border-radius: 24px;
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-main);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transform-origin: center bottom;
+    cursor: grab;
+    user-select: none;
+    touch-action: none;
+
+    /* Default shadow transition */
+    transition:
+        box-shadow 0.3s ease,
+        border-color 0.3s ease,
+        transform 0.1s ease;
+}
+
+/* Active Drag State class to toggle inside JS */
+.tender-card.dragging {
+    cursor: grabbing;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+    transition: none !important; /* Disable transition during drag */
+}
+
+/* Returning/Resetting transition class to toggle inside JS */
+.tender-card.returning {
+    transition:
+        transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.25),
+        box-shadow 0.3s ease,
+        border-color 0.3s ease !important;
+}
+
+/* Swiped Card transition class to toggle inside JS */
+.tender-card.swiping {
+    transition:
+        transform 0.5s cubic-bezier(0.16, 1, 0.3, 1),
+        opacity 0.5s ease !important;
+    pointer-events: none;
+}
+
+/* Visual color tone classes (Toggle in JS based on Swipe Direction) */
+.tender-card.swipe-left-tone {
+    border-color: rgba(254, 60, 114, 0.4);
+    box-shadow:
+        0 0 25px rgba(254, 60, 114, 0.2),
+        inset 0 0 40px rgba(254, 60, 114, 0.1);
+}
+.tender-card.swipe-left-tone .card-image::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(254, 60, 114, 0.18); /* Phủ màu đỏ nhạt lên ảnh */
+    z-index: 2;
+    pointer-events: none;
+    transition: background-color 0.2s ease;
+}
+
+.tender-card.swipe-right-tone {
+    border-color: rgba(45, 225, 162, 0.4);
+    box-shadow:
+        0 0 25px rgba(45, 225, 162, 0.2),
+        inset 0 0 40px rgba(45, 225, 162, 0.1);
+}
+.tender-card.swipe-right-tone .card-image::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(45, 225, 162, 0.18); /* Phủ màu xanh nhạt lên ảnh */
+    z-index: 2;
+    pointer-events: none;
+    transition: background-color 0.2s ease;
+}
+
+/* Profile Photo */
+.card-image {
+    position: relative;
+    width: 100%;
+    flex: 1;
+    overflow: hidden;
+    background: #111;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+}
+
+/* Photo gradient overlay so text stays readable */
+.card-image::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 40%;
+    background: var(--gradient-overlay);
+    pointer-events: none;
+}
+
+/* Stamp Badge overlays inside Photo */
+.stamp {
+    position: absolute;
+    top: 35px;
+    font-size: 32px;
+    font-weight: 900;
+    text-transform: uppercase;
+    padding: 6px 16px;
+    border: 4px solid;
+    border-radius: 10px;
+    letter-spacing: 1px;
+    opacity: 0;
+    transition:
+        opacity 0.15s ease,
+        transform 0.15s ease;
+    z-index: 5;
+    pointer-events: none;
+}
+
+.stamp-like {
+    color: var(--color-like);
+    border-color: var(--color-like);
+    left: 30px;
+    transform: rotate(-15deg) scale(0.9);
+}
+
+.stamp-nope {
+    color: var(--color-nope);
+    border-color: var(--color-nope);
+    right: 30px;
+    transform: rotate(15deg) scale(0.9);
+}
+
+/* Trigger stamp visible in JS */
+.tender-card.swipe-left-tone .stamp-nope {
+    opacity: 1;
+    transform: rotate(15deg) scale(1.1);
+    color: var(--color-nope);
+    border-color: var(--color-nope);
+    box-shadow:
+        0 0 15px var(--color-nope),
+        inset 0 0 10px var(--color-nope);
+    text-shadow: 0 0 10px var(--color-nope);
+}
+
+.tender-card.swipe-right-tone .stamp-like {
+    opacity: 1;
+    transform: rotate(-15deg) scale(1.1);
+    box-shadow:
+        0 0 15px var(--color-like),
+        inset 0 0 10px var(--color-like);
+    text-shadow: 0 0 10px var(--color-like);
+}
+
+/* Profile Info Panel */
+.card-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px 24px;
+    background-color: var(--bg-card);
+}
+
+.card-info h3 {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.card-info h3 .age {
+    font-size: 20px;
+    font-weight: 400;
+    color: var(--text-muted);
+}
+
+.card-info .job {
+    font-size: 14px;
+    font-weight: 600;
+    color: #ff5e62;
+    margin-top: 4px;
+}
+
+.card-info .bio {
+    font-size: 13.5px;
+    line-height: 1.5;
+    color: var(--text-muted);
+    margin-top: 8px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* Empty Stack State styling */
+.no-more-cards {
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 15px;
+    padding: 20px;
+    animation: fadeIn 0.4s ease forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Action Buttons panel at footer */
+.app-buttons {
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding-bottom: 16px;
+    z-index: 10;
+}
+
+.btn {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    border: 1px solid var(--border-color);
+    background-color: var(--bg-card);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: var(--shadow-btn);
+    transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.25);
+}
+
+.btn:hover {
+    transform: scale(1.12);
+}
+
+.btn:active {
+    transform: scale(0.92);
+}
+
+.btn svg {
+    width: 22px;
+    height: 22px;
+}
+
+/* Button variants styling */
+.btn-dislike {
+    color: var(--color-nope);
+}
+.btn-dislike:hover {
+    background: var(--color-nope);
+    color: #fff;
+    box-shadow: 0 6px 15px rgba(254, 60, 114, 0.3);
+}
+
+.btn-superlike {
+    color: var(--color-super);
+}
+.btn-superlike:hover {
+    background: var(--color-super);
+    color: #fff;
+    box-shadow: 0 6px 15px rgba(23, 134, 255, 0.3);
+}
+
+.btn-like {
+    color: var(--color-like);
+}
+.btn-like:hover {
+    background: var(--color-like);
+    color: #fff;
+    box-shadow: 0 6px 15px rgba(45, 225, 162, 0.3);
+}
