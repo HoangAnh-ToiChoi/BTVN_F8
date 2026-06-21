@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="vi">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Spotify Music Player - Day 28</title>
+        <!-- Font Awesome cho các biểu tượng -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        />
+        <!-- Google Fonts cho kiểu chữ cao cấp -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap"
+            rel="stylesheet"
+        />
+        <!-- Style CSS -->
+        <link rel="stylesheet" href="music-player.css" />
+    </head>
+    <body>
+        <div class="app-container">
+            <!-- Cột Trái: Danh sách phát nhạc (Playlist) dạng bảng chuẩn Spotify -->
+            <section class="playlist-section">
+                <header class="playlist-header">
+                    <div class="playlist-badge">PLAYLIST</div>
+                    <h1 class="playlist-title">Nhạc Việt Chill Lofi</h1>
+                    <p class="playlist-description">
+                        Tuyển tập những ca khúc chill lofi nhẹ nhàng thư giãn
+                        cho ngày làm việc học tập hiệu quả.
+                    </p>
+                    <div class="playlist-stats">
+                        <span class="owner">F8 Student</span>
+                        <span class="dot"></span>
+                        <span class="song-count">5 bài hát</span>
+                        <span class="dot"></span>
+                        <span class="total-duration">khoảng 30 phút</span>
+                    </div>
+                </header>
+
+                <div class="playlist-table-container">
+                    <table class="playlist-table">
+                        <thead>
+                            <tr>
+                                <th class="col-num">#</th>
+                                <th class="col-title">Tiêu đề</th>
+                                <th class="col-time">
+                                    <i
+                                        class="far fa-clock"
+                                        title="Thời lượng"
+                                    ></i>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody class="playlist-body">
+                           
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Bộ điều khiển phát nhạc tích hợp ở dưới bảng danh sách bài hát -->
+                <div class="playlist-player-control">
+                    <!-- Thanh trượt điều khiển thời gian phát (Progress) -->
+                    <div class="progress-area">
+                        <div class="time-stamp" id="current-time">0:00</div>
+                        <div class="slider-wrapper">
+                            <input
+                                type="range"
+                                id="progress-slider"
+                                min="0"
+                                max="100"
+                                value="0"
+                            />
+                            <div
+                                class="slider-fill"
+                                id="progress-fill"
+                                style="width: 0%"
+                            ></div>
+                        </div>
+                        <div class="time-stamp" id="total-time">03:08</div>
+                    </div>
+
+                    <div class="controls-volume-row">
+                        <!-- Bộ điều khiển phát nhạc (Controls) -->
+                        <div class="controls-area">
+                            <!-- Trộn bài -->
+                            <button
+                                id="btn-shuffle"
+                                class="control-btn"
+                                title="Trộn bài"
+                            >
+                                <i class="fas fa-random"></i>
+                            </button>
+                            <!-- Bài trước đó -->
+                            <button
+                                id="btn-prev"
+                                class="control-btn"
+                                title="Bài trước"
+                            >
+                                <i class="fas fa-step-backward"></i>
+                            </button>
+                            <!-- Nút Play/Pause lớn tròn màu xanh lá -->
+                            <button
+                                id="btn-play-pause"
+                                class="play-pause-btn"
+                                title="Phát/Tạm dừng"
+                            >
+                                <i class="fas fa-play"></i>
+                            </button>
+                            <!-- Bài tiếp theo -->
+                            <button
+                                id="btn-next"
+                                class="control-btn"
+                                title="Bài tiếp"
+                            >
+                                <i class="fas fa-step-forward"></i>
+                            </button>
+                            <!-- Lặp bài -->
+                            <button
+                                id="btn-repeat"
+                                class="control-btn"
+                                title="Lặp bài"
+                            >
+                                <i class="fas fa-redo"></i>
+                            </button>
+                        </div>
+
+                        <!-- Thanh điều chỉnh âm lượng (Volume) -->
+                        <div class="volume-area">
+                            <button id="btn-mute" class="volume-btn">
+                                <i
+                                    class="fas fa-volume-up"
+                                    id="volume-icon"
+                                ></i>
+                            </button>
+                            <div class="slider-wrapper volume-slider-wrapper">
+                                <input
+                                    type="range"
+                                    id="volume-slider"
+                                    min="0"
+                                    max="100"
+                                    value="80"
+                                />
+                                <div
+                                    class="slider-fill"
+                                    id="volume-fill"
+                                    style="width: 80%"
+                                ></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Cột Phải: Trình phát nhạc chi tiết (Player Card) -->
+            <section class="player-section">
+                <div class="player-card">
+                    <div class="player-badge">ĐANG PHÁT TỪ PLAYLIST</div>
+
+                    <!-- Ảnh cover bài hát vuông lớn -->
+                    <div class="cover-art-container">
+                        <img
+                            id="player-cover"
+                            src="assets/images/sai-gon-oi.png"
+                            alt="Cover Art"
+                        />
+                    </div>
+
+                    <!-- Tên bài hát & Nghệ sĩ -->
+                    <div class="track-details">
+                        <h2 id="player-title">Sài Gòn Ơi</h2>
+                        <p id="player-artist">Obito</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Thẻ Audio ẩn để phát nhạc -->
+        <audio id="main-audio" src="assets/music/Sài Gòn ơi.mp3"></audio>
+
+        <!-- File Javascript để bạn tự viết logic -->
+        <script src="app.js"></script>
+    </body>
+</html>

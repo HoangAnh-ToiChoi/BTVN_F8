@@ -54,18 +54,30 @@ function renderUserCard() {
         cardUser.classList.add("tender-card");
         cardUser.innerHTML = `
             <div class="card-image">
-                <img src="${user.image}" alt="${user.name}" />
+                <img class="user-img" src="" alt="" />
                 <div class="stamp stamp-like">✨</div>
                 <div class="stamp stamp-nope">😢</div>
             </div>
             <div class="card-info">
-                <h3 >${user.name}</h3>
-                <p class="age">${user.age}</p>
-                <p class="job">${user.job}</p>
-                <p class="bio">${user.bio}</p>
+                <h3 class="user-name"></h3>
+                <p class="age user-age"></p>
+                <p class="job user-job"></p>
+                <p class="bio user-bio"></p>
             </div>
         `;
         cardContainer.appendChild(cardUser);
+        const userImg = cardUser.querySelector(".user-img");
+        const userName = cardUser.querySelector(".user-name");
+        const userAge = cardUser.querySelector(".user-age");
+        const userJob = cardUser.querySelector(".user-job");
+        const userBio = cardUser.querySelector(".user-bio");
+
+        userImg.src = user.image;
+        userImg.alt = user.name;
+        userName.textContent = user.name;
+        userAge.textContent = user.age;
+        userJob.textContent = user.job;
+        userBio.textContent = user.bio;
     });
 }
 
