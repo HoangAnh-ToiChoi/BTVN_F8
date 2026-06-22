@@ -17,9 +17,14 @@
     <body>
         <div class="container">
             <header class="header">
-                <a href="../index.html" class="back-link">← Quay lại Trang chủ</a>
+                <a href="../index.html" class="back-link"
+                    >← Quay lại Trang chủ</a
+                >
                 <h1>📚 Bài Tập Buổi 29</h1>
-                <p class="subtitle">Kết nối API (Fetch, Async/Await) để hiển thị Danh sách và Chi tiết sản phẩm</p>
+                <p class="subtitle">
+                    Kết nối API (Fetch, Async/Await) để hiển thị Danh sách và
+                    Chi tiết sản phẩm
+                </p>
             </header>
 
             <main class="cards-grid">
@@ -35,12 +40,30 @@
                         </div>
                         <div class="card-body">
                             <ul class="feature-list">
-                                <li>Kết nối API của DummyJSON để lấy danh sách 30 sản phẩm đầu tiên.</li>
-                                <li>Thiết kế giao diện lưới sản phẩm rõ ràng, sạch sẽ, chuẩn Responsive.</li>
-                                <li>Truyền ID sản phẩm qua đường dẫn URL dưới dạng Query Parameter (?id=x).</li>
-                                <li>Trang chi tiết tự đọc tham số URL và gọi API chi tiết sản phẩm tương ứng.</li>
-                                <li>Tích hợp nút quay lại trang danh sách sản phẩm mượt mà.</li>
-                             </ul>
+                                <li>
+                                    Sử dụng https://dummyjson.com phần
+                                    “products” để làm nguồn dữ liệu.
+                                </li>
+                                <li>
+                                    Giao diện tự làm, rõ ràng, sạch sẽ, hiển thị
+                                    đủ thông tin sản phẩm (phù hợp khi hiển thị
+                                    dưới dạng danh sách).
+                                </li>
+                                <li>
+                                    Click vào một sản phẩm thì chuyển qua trang
+                                    detail.html và hiển thị đúng thông tin của
+                                    sản phẩm vừa click.
+                                </li>
+                                <li>
+                                    Đọc tài liệu từ dummyjson để biết cách GET
+                                    chi tiết sản phẩm.
+                                </li>
+                                <li>
+                                    Lấy dữ liệu để xác định được sản phẩm hiện
+                                    tại qua query parameter (VD: ?id=1) và gọi
+                                    API để nhận về JSON.
+                                </li>
+                            </ul>
                         </div>
                         <div class="card-footer">
                             <span class="btn btn-featured">Xem bài làm</span>
