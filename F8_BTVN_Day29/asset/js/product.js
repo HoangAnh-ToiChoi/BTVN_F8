@@ -21,6 +21,9 @@ async function getProduct(url) {
             productItem.appendChild(productImage);
 
             const productImageImg = document.createElement("img");
+            productImageImg.onload = () => {
+                productImageImg.classList.add("loaded");
+            };
             productImageImg.src = product.thumbnail;
             productImage.appendChild(productImageImg);
 
