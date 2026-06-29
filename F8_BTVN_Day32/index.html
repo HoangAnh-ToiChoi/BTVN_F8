@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>VS Code File Explorer</title>
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Inter:wght@300;400;500;600;700&display=swap"
+            rel="stylesheet"
+        />
+        <!-- Font Awesome -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        />
+        <link rel="stylesheet" href="./asset/css/reset.css" />
+        <link rel="stylesheet" href="./asset/css/styles.css" />
+    </head>
+    <body>
+        <div class="app-container">
+            <!-- Sidebar: File Explorer -->
+            <aside class="sidebar">
+                <div class="sidebar-header">
+                    <span class="header-title">EXPLORER</span>
+                    <div class="header-actions">
+                        <button title="New File...">
+                            <i class="fa-regular fa-file"></i>
+                        </button>
+                        <button title="New Folder...">
+                            <i class="fa-regular fa-folder-open"></i>
+                        </button>
+                        <button title="Collapse All">
+                            <i class="fa-solid fa-minimize"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="project-title">
+                    <i class="fa-solid fa-chevron-down project-arrow"></i>
+                    <span>F8_BTVN_DAY32</span>
+                </div>
+
+                <!-- Cây thư mục (Đây là cấu trúc HTML mẫu để bạn tham khảo render bằng JS) -->
+                <div class="file-tree" id="fileTree">
+                    <!-- Ví dụ Folder đóng -->
+                </div>
+            </aside>
+
+            <!-- Main Work Area (Chỉ hiển thị giao diện chào mừng đẹp mắt) -->
+            <main class="main-content">
+                <div class="welcome-screen">
+                    <div class="logo-wrapper">
+                        <i class="fa-brands fa-js-square welcome-logo"></i>
+                    </div>
+                    <h1>Visual Studio Code</h1>
+                    <p class="subtitle">File Tree Explorer Project</p>
+
+                    <div class="keyboard-shortcuts">
+                        <div class="shortcut-item">
+                            <span class="shortcut-desc">Open File</span>
+                            <kbd>Ctrl</kbd> + <kbd>P</kbd>
+                        </div>
+                        <div class="shortcut-item">
+                            <span class="shortcut-desc"
+                                >Show Command Palette</span
+                            >
+                            <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd>
+                        </div>
+                        <div class="shortcut-item">
+                            <span class="shortcut-desc"
+                                >Rename File / Folder</span
+                            >
+                            <kbd>Right Click</kbd> → <kbd>Rename</kbd>
+                        </div>
+                        <div class="shortcut-item">
+                            <span class="shortcut-desc"
+                                >Delete File / Folder</span
+                            >
+                            <kbd>Right Click</kbd> → <kbd>Delete</kbd>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+
+        <!-- Custom Context Menu -->
+        <div class="context-menu" id="contextMenu">
+            <button class="context-item" id="menuRename">
+                <i class="fa-regular fa-pen-to-square"></i> Rename
+            </button>
+            <button class="context-item delete" id="menuDelete">
+                <i class="fa-regular fa-trash-can"></i> Delete
+            </button>
+        </div>
+
+        <script src="./asset/js/main.js"></script>
+    </body>
+</html>
