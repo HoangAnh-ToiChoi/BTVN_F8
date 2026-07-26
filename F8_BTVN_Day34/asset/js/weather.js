@@ -90,7 +90,6 @@ function WeatherApp() {
                             </div>
                         </div>
 
-                        {/* 6. Viết sự kiện onClick cho nút Làm mới này để cập nhật random nhiệt độ & độ ẩm */}
                         <button
                             className="btn-refresh"
                             onClick={randomTemHumidity}
@@ -100,7 +99,7 @@ function WeatherApp() {
                     </div>
                 ) : (
                     <div className="weather-placeholder">
-                        {/* 7. Điền chữ nhắc nhở khi chưa chọn thành phố ở đây */}
+                        Vui lòng chọn thành phố để xem thời tiết
                     </div>
                 )}
             </div>
