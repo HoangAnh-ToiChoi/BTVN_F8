@@ -1,0 +1,135 @@
+.counter-card {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 32px;
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.4),
+    0 0 60px rgba(29, 185, 84, 0.03);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: var(--text-primary);
+  }
+
+  .count-display {
+    font-size: 5rem;
+    font-weight: 700;
+    margin: 10px 0;
+    line-height: 1;
+    display: block;
+    transition: color 0.2s ease;
+
+    &.zero {
+      color: var(--text-secondary);
+    }
+
+    &.positive {
+      color: var(--primary-color);
+
+      & + .status-text {
+        background-color: rgba(29, 185, 84, 0.1);
+        border-color: rgba(29, 185, 84, 0.2);
+        color: var(--primary-color);
+      }
+    }
+
+    &.negative {
+      color: var(--danger-color);
+
+      & + .status-text {
+        background-color: rgba(241, 92, 92, 0.1);
+        border-color: rgba(241, 92, 92, 0.2);
+        color: var(--danger-color);
+      }
+    }
+  }
+
+  .status-text {
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 6px 14px;
+    border-radius: 20px;
+    display: inline-block;
+    margin-bottom: 24px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border-color);
+    color: var(--text-secondary);
+    transition: all 0.2s ease;
+  }
+
+  .button-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    width: 100%;
+
+    button {
+      grid-column: span 1;
+    }
+
+    .btn-reset {
+      grid-column: span 2;
+      margin-top: 4px;
+    }
+  }
+
+  .btn {
+    font-family: inherit;
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition:
+      opacity 0.2s ease,
+      transform 0.1s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: none;
+
+    &:active {
+      transform: scale(0.98);
+    }
+
+    &-increase {
+      background-color: var(--primary-color);
+      color: #ffffff;
+
+      &:hover {
+        opacity: 0.9;
+      }
+    }
+
+    &-decrease {
+      background-color: var(--danger-color);
+      color: #ffffff;
+
+      &:hover {
+        opacity: 0.9;
+      }
+    }
+
+    &-reset {
+      background-color: #2a2a2a;
+      color: var(--text-primary);
+      border: 1px solid var(--border-color);
+
+      &:hover {
+        background-color: #333333;
+      }
+    }
+  }
+}
