@@ -1,8 +1,8 @@
 .fb-profile-container {
   --fb-blue: #1877f2;
   --fb-blue-hover: #166fe5;
-  --fb-grey-button: #3a3b3c;
-  --fb-grey-button-hover: #4e4f50;
+  --fb-grey-button: #e4e6eb;
+  --fb-grey-button-hover: #d8dadf;
 
   background-color: var(--card-bg);
   border: 1px solid var(--border-color);
@@ -10,8 +10,8 @@
   width: 100%;
   max-width: 680px;
   box-shadow:
-    0 12px 28px 0 rgba(0, 0, 0, 0.2),
-    0 2px 4px 0 rgba(0, 0, 0, 0.1);
+    0 8px 24px rgba(0, 0, 0, 0.06),
+    0 2px 4px rgba(0, 0, 0, 0.04);
   overflow: hidden;
 
   .fb-cover-photo {

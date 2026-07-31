@@ -1,7 +1,7 @@
 .comments-container {
-  --card-hover-bg: #252525;
-  --border-hover-color: #444444;
-  --spotify-green: #1db954;
+  --card-hover-bg: #f9fafb;
+  --border-hover-color: #d1d5db;
+  --spotify-green: #ec4899;
 
   max-width: 1200px;
   margin: 0 auto;
@@ -25,7 +25,9 @@
     display: flex;
     flex-direction: column;
     gap: 16px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    box-shadow:
+      0 10px 30px rgba(0, 0, 0, 0.06),
+      0 0 45px rgba(236, 72, 153, 0.01);
 
     .form-title {
       font-size: 1.25rem;
@@ -48,7 +50,7 @@
       flex: 1;
       font-family: inherit;
       font-size: 0.95rem;
-      background-color: var(--bg-color);
+      background-color: #f9fafb;
       border: 1px solid var(--border-color);
       border-radius: 6px;
       padding: 10px 14px;
@@ -64,14 +66,14 @@
 
       &:focus {
         border-color: var(--spotify-green);
-        box-shadow: 0 0 10px rgba(29, 185, 84, 0.15);
+        box-shadow: 0 0 10px rgba(236, 72, 153, 0.15);
       }
     }
 
     .comment-textarea {
       font-family: inherit;
       font-size: 0.95rem;
-      background-color: var(--bg-color);
+      background-color: #f9fafb;
       border: 1px solid var(--border-color);
       border-radius: 6px;
       padding: 12px 14px;
@@ -90,7 +92,7 @@
 
       &:focus {
         border-color: var(--spotify-green);
-        box-shadow: 0 0 10px rgba(29, 185, 84, 0.15);
+        box-shadow: 0 0 10px rgba(236, 72, 153, 0.15);
       }
     }
 
@@ -135,13 +137,13 @@
     flex-direction: column;
     gap: 14px;
     transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 
     &:hover {
       transform: translateY(-4px);
       background-color: var(--card-hover-bg);
       border-color: var(--border-hover-color);
-      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
     }
 
     .comment-card-header {
@@ -197,7 +199,7 @@
 
     .comment-body {
       font-size: 0.9rem;
-      color: #e2e8f0;
+      color: var(--text-primary);
       line-height: 1.5;
       padding-left: 52px;
     }
@@ -216,5 +218,5 @@
   width: 100%;
   max-width: 300px;
   margin: 100px auto;
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
 }
