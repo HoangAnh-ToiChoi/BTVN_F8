@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, Outlet, Link } from "react-router";
+import { HashRouter, Routes, Route, Outlet, Link } from "react-router";
 
 import Home from "../Pages/Home";
 import CounterApp from "../Pages/Counter";
@@ -24,7 +24,7 @@ function SubPageLayout() {
 
 function AppRoute() {
     return (
-        <BrowserRouter>
+        <HashRouter>
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route element={<SubPageLayout />}>
@@ -37,7 +37,7 @@ function AppRoute() {
                     <Route path="/Buttons" element={<Buttons />} />
                 </Route>
             </Routes>
-        </BrowserRouter>
+        </HashRouter>
     );
 }
 

@@ -1,6 +1,6 @@
 .posts-container {
-    --card-hover-bg: #252525;
-    --border-hover-color: #444444;
+    --card-hover-bg: #fffcfd;
+    --border-hover-color: var(--primary-color);
     --spotify-green: #1db954;
     --facebook-blue: #1877f2;
 
@@ -39,7 +39,7 @@
             transform: translateY(-4px);
             background-color: var(--card-hover-bg);
             border-color: var(--border-hover-color);
-            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+            box-shadow: 0 12px 24px rgba(236, 72, 153, 0.15);
         }
 
         .post-header {

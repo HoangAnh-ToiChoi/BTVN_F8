@@ -25,7 +25,7 @@ function Button({
 
     const Component = href ? "a" : "button";
     return (
-        <Component {...PassProp} className={clsx(className)}>
+        <Component {...PassProp} href={href} className={clsx(className)}>
             {loading && <span className={clsx(styles.spinner)}></span>}
             <span className={clsx(styles.text)}>{children}</span>
         </Component>
