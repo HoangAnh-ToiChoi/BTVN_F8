@@ -1,4 +1,4 @@
-import { BrowserRouter, HashRouter, Routes, Route, Outlet } from "react-router";
+import { BrowserRouter, HashRouter, Routes, Route, Outlet, Navigate } from "react-router";
 
 // Layout
 import DefaultLayout from "../../Layout/DefaultLayout";
@@ -18,6 +18,7 @@ import Dashboard from "../../Pages/Dashboard";
 import Users from "../../Pages/Users";
 import Settings from "../../Pages/Settings";
 import NotFound from "../../Pages/NotFound";
+import ForgotPassword from "../../Pages/ForgotPassword";
 
 // Components
 import ScrollToTop from "../ScrollToTop";
@@ -37,8 +38,13 @@ function AppRouter() {
                 </Route>
 
                 <Route path="/auth" element={<AuthLayout />}>
+                    <Route index element={<Navigate to="login" replace />}></Route>
                     <Route path="login" element={<Login />}></Route>
                     <Route path="register" element={<Register />}></Route>
+                    <Route
+                        path="forgot-password"
+                        element={<ForgotPassword />}
+                    ></Route>
                 </Route>
 
                 <Route path="/admin" element={<AdminLayout />}>
