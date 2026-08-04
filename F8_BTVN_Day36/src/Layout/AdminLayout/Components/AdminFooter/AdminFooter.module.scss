@@ -1,0 +1,24 @@
+.footer {
+    padding: 20px 32px;
+    background-color: #ffffff;
+    border-top: 1px solid #f3f4f6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: auto;
+    font-family:
+        "Outfit",
+        "Inter",
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        sans-serif;
+
+    p {
+        font-size: 0.85rem;
+        font-weight: 500;
+        color: #9ca3af;
+        letter-spacing: 0.02em;
+    }
+}

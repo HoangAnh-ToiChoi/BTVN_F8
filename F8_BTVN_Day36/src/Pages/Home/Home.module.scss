@@ -57,7 +57,7 @@
     display: flex;
     flex-direction: column;
     overflow: hidden;
-    min-height: 520px; /* Tall rectangle: height is longer than width */
+    min-height: 520px;
 
     &:hover {
         transform: translateY(-8px);
@@ -81,7 +81,7 @@
 .cardSubtitle {
     font-size: 0.85rem;
     font-weight: 500;
-    color: #b45309; /* orange/gold subtitle matching the screenshot */
+    color: #b45309;
     margin: 0;
     line-height: 1.5;
     font-style: italic;
@@ -120,7 +120,6 @@
     margin-top: 1px;
 }
 
-/* Completed states */
 .completed {
     .subtaskItem.done {
         color: #1f2937;
@@ -145,7 +144,6 @@
     }
 }
 
-/* Incomplete states */
 .incomplete {
     .subtaskItem.done {
         .subtaskIcon {

@@ -1,4 +1,11 @@
-import { BrowserRouter, HashRouter, Routes, Route, Outlet, Navigate } from "react-router";
+import {
+    BrowserRouter,
+    HashRouter,
+    Routes,
+    Route,
+    Outlet,
+    Navigate,
+} from "react-router";
 
 // Layout
 import DefaultLayout from "../../Layout/DefaultLayout";
@@ -38,8 +45,7 @@ function AppRouter() {
                 </Route>
 
                 <Route path="/auth" element={<AuthLayout />}>
-                    <Route index element={<Navigate to="login" replace />}></Route>
-                    <Route path="login" element={<Login />}></Route>
+                    <Route index path="login" element={<Login />}></Route>
                     <Route path="register" element={<Register />}></Route>
                     <Route
                         path="forgot-password"

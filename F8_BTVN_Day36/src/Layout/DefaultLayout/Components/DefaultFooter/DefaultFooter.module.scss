@@ -6,14 +6,14 @@
     align-items: center;
     gap: 32px;
     padding: 24px;
-    margin-top: auto; /* Push footer to the bottom */
-    background-color: #111827; /* Premium dark black background */
+    margin-top: auto;
+    background-color: #111827;
     border-top: 1px solid rgba(255, 255, 255, 0.05);
     font-family: "Outfit", "Inter", sans-serif;
 
     a {
         text-decoration: none;
-        color: #9ca3af; /* High contrast light grey */
+        color: #9ca3af;
         font-size: 0.9rem;
         font-weight: 600;
         letter-spacing: 0.05em;
@@ -28,12 +28,12 @@
             left: 0;
             width: 0;
             height: 2px;
-            background-color: #818cf8; /* Glowing indigo underline */
+            background-color: #818cf8;
             transition: width 0.25s ease-in-out;
         }
 
         &:hover {
-            color: #ffffff; /* Bright white hover */
+            color: #ffffff;
 
             &::after {
                 width: 100%;
@@ -41,7 +41,7 @@
         }
 
         &.active {
-            color: #818cf8; /* Glowing active indicator */
+            color: #818cf8;
 
             &::after {
                 width: 100%;

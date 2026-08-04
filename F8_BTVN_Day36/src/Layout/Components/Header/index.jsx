@@ -9,6 +9,11 @@ function Header() {
             <NavLink to="/posts">Posts</NavLink>
             <NavLink to="/contact">Contact</NavLink>
             <NavLink to="/privacy">Privacy</NavLink>
+            <div className={styles.authGroup}>
+                <NavLink to="/auth/login">Login</NavLink>
+                <NavLink to="/auth/register">Register</NavLink>
+                <NavLink to="/admin/">Admin</NavLink>
+            </div>
         </div>
     );
 }

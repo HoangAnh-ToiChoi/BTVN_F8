@@ -1,7 +1,7 @@
-import styles from "./Footer.module.scss";
+import styles from "./DefaultFooter.module.scss";
 import { NavLink } from "react-router";
 
-function Footer() {
+function DefaultFooter() {
     return (
         <footer className={styles.footer}>
             <NavLink to="/privacy">Privacy</NavLink>
@@ -10,4 +10,4 @@ function Footer() {
     );
 }
 
-export default Footer;
+export default DefaultFooter;

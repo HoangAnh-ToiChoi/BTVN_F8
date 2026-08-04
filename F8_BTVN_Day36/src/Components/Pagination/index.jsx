@@ -5,6 +5,13 @@ function Pagination({ currentPage, totalPages, onPageChange }) {
         <div className={styles.pagination}>
             <button
                 className={`${styles.pageItem} ${styles.navBtn}`}
+                onClick={() => onPageChange(1)}
+                disabled={currentPage <= 1}
+            >
+                First
+            </button>
+            <button
+                className={`${styles.pageItem} ${styles.navBtn}`}
                 onClick={() => {
                     if (currentPage > 1) {
                         onPageChange(currentPage - 1);
@@ -26,11 +33,12 @@ function Pagination({ currentPage, totalPages, onPageChange }) {
                             onClick={() => {
                                 onPageChange(pageNum);
                             }}
+                            disabled={currentPage === pageNum}
                         >
                             {pageNum}
                         </button>
                     );
-                })}{" "}
+                })}
             <button
                 className={`${styles.pageItem} ${styles.navBtn}`}
                 onClick={() => {
@@ -41,6 +49,13 @@ function Pagination({ currentPage, totalPages, onPageChange }) {
                 disabled={currentPage >= totalPages}
             >
                 Next
+            </button>
+            <button
+                className={`${styles.pageItem} ${styles.navBtn}`}
+                onClick={() => onPageChange(totalPages)}
+                disabled={currentPage >= totalPages}
+            >
+                Last
             </button>
         </div>
     );

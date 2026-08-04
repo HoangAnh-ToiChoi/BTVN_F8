@@ -1,12 +1,13 @@
-import React from 'react';
-import styles from './Dashboard.module.scss';
+import React from "react";
+import styles from "./Dashboard.module.scss";
 
 function Dashboard() {
-  return (
-    <div className={styles.dashboard}>
-      <h1>Dashboard Page</h1>
-    </div>
-  );
+    return (
+        <div className={styles.dashboard}>
+            <h1>Dashboard Page</h1>
+            <p>Welcome to the admin dashboard.</p>
+        </div>
+    );
 }
 
 export default Dashboard;

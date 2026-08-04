@@ -29,12 +29,12 @@
     width: 480px;
     background: #ffffff;
     border: 1px solid #e5e7eb;
-    border-radius: 4px; /* Crisp rectangle */
+    border-radius: 4px;
     padding: 32px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
     display: flex;
     flex-direction: column;
-    gap: 18px; /* Slightly tighter spacing to fit 4 fields beautifully */
+    gap: 18px;
 
     label {
         display: flex;
@@ -52,7 +52,7 @@
         input {
             width: 100%;
             padding: 10px 14px;
-            border-radius: 4px; /* Crisp rectangle */
+            border-radius: 4px;
             border: 1px solid #d1d5db;
             background-color: #f9fafb;
             color: #1f2937;
@@ -69,13 +69,12 @@
         }
     }
 
-    /* Style the Register Link to look like a premium CTA button */
     a {
         display: block;
         text-align: center;
         width: 100%;
         padding: 14px;
-        border-radius: 4px; /* Crisp rectangle */
+        border-radius: 4px;
         background: linear-gradient(135deg, #6366f1 0%, #7c3aed 100%);
         color: #ffffff;
         font-weight: 700;
